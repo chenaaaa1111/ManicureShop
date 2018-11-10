@@ -1,0 +1,264 @@
+body{background-color: #F4F4F4;}
+html,body{width: 100%;height: 100%;}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.wrapper{
+  width: 100%;position: absolute;top: 0;bottom: 0.88rem;height: auto; overflow-y: scroll;
+  position: relative;
+}
+.wrapInner{
+  width: 100%;position: relative;overflow: scroll;padding-bottom: 1.8rem;
+
+}
+.top{
+  position: relative;height: 7.2rem;
+}
+.top img{
+  display: block;width: 100%;height: 100%;
+}
+.back,.card{
+  width: 0.6rem;height: 0.6rem;position: absolute;top: 0.5rem;border-radius: 50%;
+}
+.back{left: 0.24rem;}
+.card{right: 0.24rem;}
+.back img,.card img{display: block;width: 100%;height: 100%;}
+.introduce{
+  position: relative;background: #FFF;
+}
+.introduce .txt{
+  margin: 0rem 2.5rem 0rem 1rem;font-size: 0.36rem;color: #333;font-weight: 600;
+  height: 1.22rem;line-height: 1.22rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+}
+.introduce .price{
+  position: absolute;height: 100%;top: 0;right: 0.24rem;font-size: 0.36rem;color: #FF096D;font-weight: 600;
+  line-height: 1.48rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 2rem;
+}
+
+.price .symbol{margin-right: 0.05rem;}
+.introduce .pic{
+  width: 1.4rem;height: 100%;position: absolute;top: 0;left: 0;
+}
+.pic .imgBox{
+  width: 0.54rem;height: 0.54rem;border-radius: 50%;margin: 0.31rem 0.26rem 0.26rem 0.24rem;
+}
+.imgBox img{display: block;width: 100%;height: 100%;}
+
+.details{
+  background-color: #FFF;
+}
+.details .ui-col{
+  line-height: 0.34rem;height: 0.34rem;position: relative;color: #999;
+}
+
+.detailsInfo{
+  margin-left: 0.38rem;font-size: 0.3rem;line-height: 0.34rem;
+}
+.detailsIcon{
+  width: 0.34rem;height: 0.34rem;position: absolute;left: 0;top: 0;
+  font-size: 0.34rem;line-height: 0.34rem;text-align: center;
+}
+.details .colCur {
+  color: #FF096D;
+}
+.detailsIcon img{
+  display: block;width: 100%;height: 100%;
+}
+.detailsTitle{margin-right: 0.2rem;}
+.commentBox{background: #FFF;padding: 0.3rem 0rem 0.39rem;margin-bottom: 0.22rem;position: relative}
+.comment{
+  margin: 0rem 0.24rem;font-size: 0.24rem;color: #999;
+  border-radius: 0.16rem;border: 1px solid #e9e9e9;height: 0.56rem;
+  text-align: center;line-height: 0.56rem;
+}
+.inputBox{
+  border-radius: 0.16rem;border: 1px solid #e9e9e9;height: 0.56rem;overflow: hidden;
+  position: absolute;top: 0.3rem;left: 0.24rem;right: 0.24rem;width: auto;
+  display: none;
+}
+.boxInner{
+  width: 100%;height: 100%;position: relative;
+}
+.inputWrap{margin-right: 0.8rem;height: 100%;font-size:.34rem}
+.inputBox input{
+  border: 0;width: 100%;height: 100%;display: block;font-size: 0.16rem;text-indent: 0.08rem;
+}
+.send{
+  width: 0.8rem;height: 100%;position: absolute;top: 0;right: 0;font-size: 0.24rem;
+  background: #12B7F5;color: #FFF;text-align: center;line-height: 0.56rem;
+}
+.lately{
+  background: #fff;margin-bottom: 0.22rem;
+  padding-bottom: 1rem;
+}
+.lateHead{
+  height: 0.6rem;line-height: 0.6rem;border: 2px solid #F4F4F4;
+}
+.lateTitle{
+  height: 100%;float: left;font-size: 0.3rem;color: #999;font-size: 600;margin-left: 0.24rem;
+}
+.lateInfo{
+  height: 100%;float: right;font-size: 0.3rem;color: #999;margin-right: 0.24rem;
+}
+.userBox{padding-bottom: 0.23rem;}
+.userBox:after{
+  display: block;height: 0;content: '';clear: both;
+}
+.userList{
+  width: 0.88rem;height: 0.88rem;border-radius: 50%;overflow: hidden;float: left;
+  margin-left: 0.3rem;
+}
+.userList img{display: block;width: 100%;height: 100%;}
+.userList:nth-child(1){margin-top: 0.3rem;}
+.userList:nth-child(2),.userList:nth-child(4),.userList:nth-child(6){margin-top: 0.24rem;}
+.userList:nth-child(3){margin-top: 0.18rem;}
+.userList:nth-child(5){margin-top: 0.28rem;}
+
+
+.landlord{
+ border-top: 2px solid #F4F4F4;position: relative;
+ padding-bottom: .2rem;
+}
+.landlord:first-child{border-top: 0;}
+.lordInfo{
+  margin: 0rem 0.24rem 0rem 1.42rem;height: 100%;
+}
+.landName{
+  font-size: 0.3rem;color: #333;line-height: 0.3rem;height: 0.3rem;padding-top: 0.3rem;margin-bottom: 0.14rem;
+  position: relative;
+}
+.nameTxt{margin-right: 1.84rem;height: 0.3rem;}
+.createDate{
+  width: 3rem;height: 0.24rem;color: #999;position: absolute;bottom: 0;right: 0rem;
+  line-height: 0.24rem;font-size: 0.24rem;text-align: right;
+}
+.crap{
+  font-size: 0.24rem;color: #666;overflow: hidden;
+}
+.landUser{
+  width: 1.42rem;height: 100%;position: absolute;top: 0;left: 0;
+}
+.landIcon{
+  width: 0.88rem;height: 0.88rem;border-radius: 50%;overflow: hidden;margin: 0.23rem 0.3rem 0rem 0.24rem;
+}
+.landIcon img{display: block;width: 100%;height: 100%;}
+
+.followPoster{
+  margin-left: 1.18rem;
+}
+
+.footerBar{
+  width: 100%;height: 0.88rem;position: fixed;bottom: 0;background: #FF096D;
+}
+
+.addCard{
+  height: 100%;font-size: 0.3rem;font-weight: 600;text-align: center;line-height: 0.88rem;
+  color: #FFF;margin-right: 2.46rem;
+}
+.printing{
+  height: 100%;font-size: 0.3rem;font-weight: 600;text-align: center;line-height: 0.88rem;
+  color: #FFF;width: 2.46rem;background-color: #FF4795;position: absolute;top: 0;right: 0;
+}
+
+.sb{}
+.message{
+  background: #fff;
+}
+.mess{
+  font-size: .3rem;
+  background: #fff;
+  line-height: .6rem;
+  padding: 0rem 0 0rem .18rem;
+  color: #666;
+}
+.mess a.gomore{
+  font-size: .3rem;
+
+}
+.gomore{
+  font-size:.3rem;
+  background: #fff;
+  color: #FA004b;
+  display: inline-block;
+}
+.txt.noml{
+  margin-left: 0.3rem;
+}
+
+/*模态框*/
+.mengban{
+      height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0
+
+}
+.modol{
+    height: 6.3rem;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll;
+
+}
+
+.diacomment{
+  bottom: -1.8rem;
+}
+.diacommentBox{background: #FFF;
+  padding: 0.3rem 0rem 0.39rem;margin-bottom: 0.22rem;
+  bottom: -1.8rem;
+  position: relative}
+.diacomment{
+  margin: 0rem 0.24rem;font-size: 0.24rem;color: #999;
+  border-radius: 0.16rem;border: 1px solid #e9e9e9;height: 0.56rem;
+  text-align: center;line-height: 0.56rem;
+}
+.diasend{
+  width: 0.8rem;height: 100%;position: absolute;top: 0;right: 0;font-size: 0.24rem;
+  background: #12B7F5;color: #FFF;text-align: center;line-height: 0.56rem;
+}
+.diainputBox{
+  border-radius: 0.16rem;border: 1px solid #e9e9e9;height: 0.56rem;overflow: hidden;
+  position: absolute;top: 0.3rem;left: 0.24rem;right: 0.24rem;width: auto;
+  display: block;
+}
+.bottom{
+      position: fixed;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+}
+.basBottom{
+  padding-bottom: 1.5rem;
+}
+#scroller{
+  position: relative;
+}
+ .floor ._v-container{
+    position: relative;
+ }
+ .myscroll{
+    padding-bottom: 3rem;
+ }
+ .myscroll{
+   height: 5rem;
+ }
+ #app{
+  height: 100%;
+ }
+._v-container>._v-content>.loading-layer[data-v-ecaca2b0]{
+  bottom: 1.5rem;
+}
+.showAllcoments{
+      font-size: .32rem;
+    text-align: center;
+    margin-top: .2rem;
+}

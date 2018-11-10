@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>美甲商城登录页</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/shoppingPage.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="css/font/iconfont.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="js/rem.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./lib/dropload.css">
+
+    <script type="text/javascript" src="js/rem.js"></script>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="searchBar">
+        <div class="barInner">
+            <div class="searchBox">
+                <div class="inputBox">
+                    <input type="text" name="" value="">
+                </div>
+                <div class="searchIcon">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="shaixuan" onclick="showshaixuan()">
+            筛选
+        </div>
+    </div>
+
+    <div class="navBox">
+        <ul class="navUl">
+            <li>精选</li>
+            <li>每日上新</li>
+            <li>分享区</li>
+            <li>体验区</li>
+        </ul>
+        <div class="brand">
+            VIP专区
+        </div>
+    </div>
+
+    <div class="bannerBox">
+        <img src="images/index/banner_02.png" alt=""/>
+    </div>
+
+    <div class="circleBox">
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/love.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                爱情
+            </div>
+        </div>
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/garbage.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                非主流
+            </div>
+        </div>
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/affected.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                伤感
+            </div>
+        </div>
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/naive.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                卡通
+            </div>
+        </div>
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/bitch.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                闺蜜
+            </div>
+        </div>
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/star.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                明星
+            </div>
+        </div>
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/idiot.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                阳光
+            </div>
+        </div>
+        <div class="circleList">
+            <div class="circlePic">
+                <img src="images/index/other.png" alt=""/>
+            </div>
+            <div class="circleInfo">
+                其他
+            </div>
+        </div>
+    </div>
+
+    <div class="sticker">
+        <img src="images/index/sticker.png" alt=""/>
+    </div>
+
+    <div class="nominate last_nominate">
+        <div class="pokerBox">
+            <ul class="ui-row">
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_01.png"/>
+                        </div>
+                        <div class="userTalk">
+                            <div class="pockName">
+                                Angel竹子
+                            </div>
+                            <div class="pockMark">
+                                $150
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_02.png"/>
+                        </div>
+                        <div class="userTalk">
+                            <div class="pockName">
+                                Angel竹子
+                            </div>
+                            <div class="pockMark">
+                                $150
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_03.png"/>
+                        </div>
+                        <div class="userTalk">
+                            <div class="pockName">
+                                Angel竹子
+                            </div>
+                            <div class="pockMark">
+                                $150
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_04.png"/>
+                        </div>
+                        <div class="userTalk">
+                            <div class="pockName">
+                                Angel竹子
+                            </div>
+                            <div class="pockMark">
+                                $150
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_04.png"/>
+                        </div>
+                        <div class="userTalk">
+                            <div class="pockName">
+                                Angel竹子
+                            </div>
+                            <div class="pockMark">
+                                $150
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_04.png"/>
+                        </div>
+                        <div class="userTalk">
+                            <div class="pockName">
+                                Angel竹子
+                            </div>
+                            <div class="pockMark">
+                                $150
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="bottomBar">
+    <div class="ui-row-flex ui-whitespace">
+        <div class="ui-col ui-col">
+            <a href="indexPage.html">
+                <div class="barIcon">
+                    <img src="images/index/home.png"/>
+                </div>
+                <div class="barName">
+                    首页
+                </div>
+            </a>
+        </div>
+        <div class="ui-col ui-col col_cur">
+            <div class="barIcon">
+                <img src="images/index/house_fill.png"/>
+            </div>
+            <div class="barName">
+                商城
+            </div>
+        </div>
+        <div class="ui-col ui-col">
+            <a href="share.html">
+                <div class="barIcon">
+                    <img src="images/index/plane.png"/>
+                </div>
+                <div class="barName">
+                    分享专区
+                </div>
+            </a>
+        </div>
+        <div class="ui-col ui-col">
+            <a href="aboutMe.html">
+                <div class="barIcon">
+                    <img src="images/index/my.png"/>
+                </div>
+                <div class="barName">
+                    我的
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+   <div class="maskbg"  >
+                
+   </div>
+<div class="mask">
+    <div class="maskInner">
+        <div class="maskContent">
+            <div class="maskList">
+                <div class="listHead">
+                    <div class="listIcon">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-money"></use>
+                        </svg>
+                    </div>
+                    <span class="listName">价格</span>
+                </div>
+                <div class="screenBox">
+                    <div class="screen">从低到高</div>
+                    <div class="space"></div>
+                    <div class="screen active">从高到低</div>
+                </div>
+                <div class="division">价格区间</div>
+                <div class="screenBox">
+                    <div class="screen">
+                        <input type="text" placeholder="最低价"/>
+                    </div>
+                    <div class="space">至</div>
+                    <div class="screen">
+                        <input type="text" placeholder="最高价"/>
+                    </div>
+                </div>
+            </div>
+            <div class="maskList">
+                <div class="listHead">
+                    <div class="listIcon">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-money"></use>
+                        </svg>
+                    </div>
+                    <span class="listName">热度/点赞数</span>
+                </div>
+                <div class="screenBox">
+                    <div class="screen">从低到高</div>
+                    <div class="space"></div>
+                    <div class="screen active">从高到低</div>
+                </div>
+            </div>
+         
+            <div class="maskList">
+                <div class="listHead">
+                    <div class="listIcon">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-money"></use>
+                        </svg>
+                    </div>
+                    <span class="listName">销量</span>
+                </div>
+                <div class="screenBox">
+                    <div class="screen">从低到高</div>
+                    <div class="space"></div>
+                    <div class="screen active">从高到低</div>
+                </div>
+            </div>
+            <div class="maskList">
+                <div class="listHead">
+                    <div class="listIcon">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-money"></use>
+                        </svg>
+                    </div>
+                    <span class="listName">销量</span>
+                </div>
+                <div class="screenBox">
+                    <div class="screen">时间</div>
+                </div>
+            </div>
+        </div>
+        <div class="maskFooter">
+            <div class="maskBtn reset">重置</div>
+            <div class="maskBtn yes">确定</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script src="js/indexPage.js"></script>
+<script>
+    function showshaixuan(e){
+        $(".mask").css("right", "0rem");
+        $('.maskbg').css('display','block');
+    }
+    function hideleftBar(e){
+         $('.maskbg').css({'display':'none'});
+             $(".mask").css("right", "-5rem")
+    }
+    $(function(){
+        $('.maskbg').click(function(res){
+           hideleftBar();
+        })
+    })
+  
+</script>
+</body>
+</html>

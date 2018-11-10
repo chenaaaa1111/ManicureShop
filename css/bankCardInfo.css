@@ -1,0 +1,55 @@
+body{background-color: #F4F4F4;}
+html,body{width: 100%;height: 100%;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.head{
+    width: 100%;height: 0.98rem;padding-top: 0.49rem;line-height: 0.98rem;text-align: center;
+    color: #FFF;position: relative;background: #FF4C8E;
+}
+.headTitle{
+    margin: 0rem 0.98rem;height: 100%;font-size: 0.3rem;
+}
+.back{
+    width: 0.98rem;height: 100%;font-size: 0.3rem;left: 0;top: 0.49rem;
+    position: absolute;text-align: left;text-indent: 0.24rem;font-size: 0.4rem;
+}
+.listBtn{
+    font-size: 0.3rem;height: 0.76rem;line-height: 0.76rem;text-align: center;color: #666;
+    border: 1px solid #F1F1F1;margin: 0.4rem 0.24rem 0rem;border-radius: 0.08rem;
+    box-shadow: 0rem 0.12rem #f1e1e6;background: #FFF;
+}
+.cur{
+    color: #FF4F89;
+}
+
+.formBox{
+    margin-top: 0.3rem;
+}
+.formBox .ui-form-item{
+    padding-left: 0.24rem;padding-right: 0.24rem;
+}
+.formBox .ui-form-item-link:after{display: none;}
+.formBox .ui-form-item{color: #999;}
+.formBox .ui-form-item:last-child{
+    padding-left: 0.55rem;
+}
+
+.formBox .ui-form-item .ui-icon-close{
+    right: 0.24rem;
+}
+.tips{
+    font-size: 0.24rem;height: 0.4rem;margin-top: 0.3rem;
+    text-align: center;color: #FF4795;
+}
+.lastBox .ui-form-item{color: #333;}
+.lastBox .ui-form-item:last-child{
+    padding-left: 0.24rem;
+}
+
+
+
+

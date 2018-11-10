@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>我的方案</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" type="text/css" href="css/commens.css">
+    <link rel="stylesheet" href="css/mychooseplain.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+     <script type="text/javascript" src="lib/vue-scroller.js"></script>
+	<!-- import stylesheet -->
+	<link rel="stylesheet" href="https://unpkg.com/iview/dist/styles/iview.css">
+	<!-- import iView -->
+	<script src="https://unpkg.com/iview/dist/iview.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="wrapper">
+			<div class="top">
+			 <div class="head">
+			        <div class="title">我的方案</div>
+			        <div class="left" onclick="goback()">
+			            <svg class="icon" aria-hidden="true">
+			                <use xlink:href="#icon-back-m"></use>
+			            </svg>
+			        </div>
+			        <div class="right">
+			                <span onclick="edit(this)">编辑</span>        
+			          </div>
+			    </div>
+			</div>
+			
+             <div class="tabs change_list">
+                <div class="love active_content">
+                    <ul class="ulflex">
+                        <li v-for="item in imageList">
+                            <div class="img_show">
+                                <img :src="item.url" class="backimg">
+                                <p class="num">
+                                     <label class="ui-checkbox">
+                                       <input :id="item.id" class="carcheck" :data-url="item.url" @change="chooseImg(item,$event)" type="radio" name="choose1">
+                                   </label>
+                                </p>
+                                <p class="zanNum">10</p>
+                              </div>                  
+                        </li>
+                    </ul>
+                </div>
+              </div>
+		          <div class="tabs change_list">
+				        <div class="love active_content">
+                    <div >
+                     <p class="plainTitle">免费</p>
+                         <ul class="ulflex" >                           
+                              <li  v-for="plain in imageListA ">
+                                  <div class="img_show">
+                                      <img :src="plain.url" class="backimg">
+                                      <p class="num">
+                                           <label class="ui-checkbox">
+                                     <input :id="plain.id" :data-url="plain.url" class="carcheck" @change="chooseImg(plain,$event)" type="radio">
+                                 </label>
+                                      </p>
+                                    </div>                  
+                              </li>
+                          </ul>                   
+                  </div>	
+                    <div >
+                     <p class="plainTitle">永久使用</p>
+                         <ul class="ulflex" >                           
+                              <li  v-for="plain in imageListB ">
+                                  <div class="img_show">
+                                      <img :src="plain.url" class="backimg">
+                                      <p class="num">
+                                           <label class="ui-checkbox">
+                                     <input :data-url="plain.url"  :id="plain.id" class="carcheck" @change="chooseImg(plain,$event)" type="radio">
+                                 </label>
+                                      </p>
+                                    </div>                  
+                              </li>
+                          </ul>                   
+                  </div>	         
+				        </div>
+		          </div>
+	
+		  
+		  </div>
+		  <div id="foot" @click="deleteimg" >确定</div>
+	</div>
+    <script type="text/javascript">
+      var vm=new Vue({
+      	el:"#app",
+      	data:function(){
+      		return {
+            imageList:[{
+              url:"./images/index/Pic_01.png",
+              id:1
+            },
+            {
+              url:"./images/meijia2.png",
+              id:2
+            },
+            {
+              url:"./images/meijia1.png",
+              id:3
+            },
+            {
+              url:"./images/meijia1.png",
+              id:4
+            },
+            {
+              url:"./images/meijia1.png",
+              id:5
+            },{
+              url:"./images/meijia2.png",
+              id:6
+            },
+            {
+              url:"./images/meijia2.png",
+              id:7
+            },
+            {
+              url:"./images/meijia1.png",
+              id:8
+            },
+            {
+              url:"./images/meijia1.png",
+              id:9
+            },
+            {
+              url:"./images/meijia1.png",
+              id:10
+            }
+              ],
+                   imageListA:[{
+                                            url:"./images/meijia2.png",
+                                            id:1
+                                          },
+                                          {
+                                            url:"./images/meijia2.png",
+                                            id:2
+                                          },
+                                          {
+                                            url:"./images/meijia1.png",
+                                            id:3
+                                          }
+                    ],
+                    imageListB:[{
+                                            url:"./images/meijia2.png",
+                                            id:1
+                                          },
+                                          {
+                                            url:"./images/meijia2.png",
+                                            id:2
+                                          },
+                                          {
+                                            url:"./images/meijia1.png",
+                                            id:3
+                                          }
+                    ]
+      		}
+      	},
+      	methods:{
+      		
+      		deleteimg:function(){
+      		
+      		},
+      		chooseImg:function(item,event){
+            var url=event.currentTarget.getAttribute("data-url")
+      		    location.href="createPlainnew.html?imgUrl="+url;
+      		}
+
+      	},
+      	mounted:function(){
+
+      	}
+      })
+    </script>
+</body>
+
+</html>

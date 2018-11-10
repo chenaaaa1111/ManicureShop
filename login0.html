@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美甲商城登录页</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/font/fontclass/iconfont.css">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/login.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+</head>
+<body>
+    <div class="titleInfo">手机登陆</div>
+    <p class="tips">默认使用手机号登录，也可以第三方直接登录</p>
+    <div class="device">
+        手机号
+    </div>
+    <div class="phoneBox boxActive">
+        <div class="phone"><input type="number"/></div>
+        <div class="circle">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-right"></use>
+            </svg>
+        </div>
+        <div class="prefix">+86</div>
+    </div>
+    <div class="other">
+        <div class="ui-row-flex ui-whitespace">
+            <div class="ui-col ui-col weChat">
+                <div class="otherIcon">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weChat"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="ui-col ui-col alipay">
+                <div class="otherIcon">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-alipay"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="ui-col ui-col user">
+                <div class="otherIcon">
+                  <i class="iconfont icon-shenfenzheng"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script src="js/login.js"></script>
+    <script type="text/javascript">
+        showPromise('haha',function(){
+                alert('弹窗关闭')
+        });
+        showDialog({msg:'HELLO WORLS',
+            makeSure:function(res){
+            console.log('123');
+            },
+            cancen:function(){
+                alert(66)
+            }
+
+    })
+
+    </script>
+</body>
+</html>

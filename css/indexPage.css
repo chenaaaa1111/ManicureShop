@@ -1,0 +1,260 @@
+body{background-color: #EEEEFF;}
+html,body{width: 100%;height: 100%;}
+.wrapper{
+  position: absolute;width: 100%;top: 0;bottom: 0.95rem;height: auto;
+  overflow: auto;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.top{
+  height: 4.05rem;position: relative;
+}
+.swiper-container {
+    height: 4.05rem;
+}
+.swiper-container img{display: block;width: 100%;height: 100%;}
+.searchBar{
+  height: 0.64rem;width: 100%;
+  position: absolute;top: 0.65rem;left: 0;z-index: 999;
+}
+.barInner{
+  width: 100%;height: 100%;position: relative;
+}
+.searchBox{
+  margin: 0rem 0.8rem;height: 100%;background: rgba(255,255,255,0.5);
+  border-radius: 8px;position: relative;overflow: hidden;
+}
+.ewmBox{position: absolute;width: 0.8rem;height: 100%;top: 0;left: 0;}
+.cardBox{position: absolute;width: 0.8rem;height: 100%;top: 0;right: 0;}
+.circle{
+  width: 0.58rem;height: 0.58rem;margin: 0.03rem auto;
+  border-radius: 50%;
+}
+.circle img{display: block;width: 100%;height: 100%;}
+.searchIcon{
+  width: 0.64rem;height: 100%;
+  position: absolute;top: 0;left: 0;color: #666;
+  text-align: center;line-height: 0.64rem;font-size: 0.3rem;
+}
+.inputBox{
+  height: 100%;margin-left: 0.64rem;
+}
+.inputBox input{
+  font-size: 0.28rem;height: 100%;border: none;background: transparent;
+  display: block;width: 100%;
+}
+.tofu{background: #FFF;}
+.tofu .ui-col{
+  font-size: 0.28rem;
+}
+.tofu .block{
+  margin: 0.14rem 0.18rem;border-radius: 8px;overflow: hidden;
+  position: relative;height: 1.1rem;
+}
+.tofu .block img{
+  display: block;width: 100%;
+}
+.tofuInfo{
+  position: absolute;left: 1.12rem;right: 0;width: auto;height: 100%;
+}
+.tofuTitle{
+  color: #FFF;margin-top: 0.28rem;font-size: 0.28rem;
+  line-height: 0.28rem;height: 0.28rem;
+}
+.tofuDes{
+  color: #FFF;font-size: 0.22rem;line-height: 0.22rem;height: 0.22rem;margin-top: 0.06rem;
+}
+.block1{
+  background-color: #E64458;
+}
+.block2{
+  background-color: #FFAA48;
+}
+.block3{
+  background-color: #FFBB88;
+}
+.block4{
+  background-color: #F099F9;
+}
+
+.nominate{
+  margin-top: 0.2rem;background: #FFF;
+  padding-top: 0.24rem;
+}
+.titleBar{}
+.titleBar:after{
+  display: block;height: 0;content: "";clear: both;
+}
+.titleName{
+  font-size: 0.36rem;color: #333;font-weight: 600;
+  float: left;margin-left: 0.24rem;height: 0.36rem;line-height: 0.36rem;
+}
+.moreBtn{
+  float: right;font-size: 0.24rem;margin-right: 0.4rem;color: #999;line-height: 0.36rem;
+}
+.pokerBox{
+  margin: 0.26rem 0.4rem 0rem;
+}
+.poker{
+  /* height: 3.7rem; */
+  border: 1px solid #ddd;border-radius: 5px;overflow: hidden;
+}
+.pokerBox .ui-row{border-bottom: 2px solid #eee;}
+.pokerBox .ui-row li{margin-bottom: 0.28rem;}
+.pokerBox .ui-row li:nth-child(odd) .poker{
+  margin-right: 0.3rem;
+}
+.pokerBox .ui-row li:nth-child(even) .poker{
+  margin-left: 0.3rem;
+}
+.pokerImg{
+  position: relative;width: 100%;
+  padding-bottom: 100%;border-radius: 5px;overflow: hidden;
+}
+.pokerImg img{
+  display: block;width: 100%;height: 100%;
+  position: absolute;top: 0;left: 0;
+}
+.poker .depict{
+  height: 0.42rem;margin: 0rem 0.1rem 0.1rem;
+  font-size: 0.24rem;line-height: 0.42rem;color: #333;
+  white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+}
+.poker .money{
+  font-size: 0.24rem;margin: 0rem 0.1rem 0.0rem;color: #F21542;font-weight: 600;
+  padding-bottom: .2rem;
+}
+.belt{
+  margin: 0.16rem 0rem 0.2rem;height: 2.1rem;background: #FFF;padding-bottom: 0.53rem;
+}
+.beltInner{width: 100%;height: 2.1rem;}
+.beltInner img{
+  display: block;width: 100%;height: 100%;
+}
+.rebate{
+  background: #FFF;margin: 0rem 0.24rem;border-bottom: 2px solid #EEE;
+  overflow: auto;padding: 0.32rem 0rem 0rem;white-space: nowrap;
+}
+.rebate::after{display: block;height: 0;content: '';clear: both;}
+.rebateList{
+  width: 2.26rem;border: 1px solid #ECECEC;display: inline-block;
+  border-radius: 8px;overflow: hidden;position: relative;margin-right: 0.35rem;
+}
+.rebateImgBox{width: 100%;height: 2.95rem;padding-top: 0;}
+.rebateImgBox img{
+  display: block;width: 100%;height: 100%;
+}
+.rebateImgBox .ui-subscript{
+  font-size: 0.18rem;height: 0.5rem;line-height: 0.6rem;
+  -webkit-transform: rotate(-45deg) translate(-25%, -80%);
+  transform: rotate(-45deg) translate(-25%, -80%);
+}
+.rebateInfo{
+  height: 0.69rem;background: #FFF;position: relative;
+}
+.rebateIcon{
+  width: 0.68rem;height: 100%;
+  position: absolute;top: 0;left: 0;
+}
+.rebateName{
+  height: 100%;margin: 0rem 0.12rem 0rem 0.68rem;line-height: 0.68rem;
+  white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+  font-size: 0.24rem;color: rgba(0,0,0,0.5);
+}
+
+.userIcon{width: 0.44rem;height: 0.44rem;margin: 0.12rem;border-radius: 50%;overflow: hidden;}
+.userIcon img{
+  display: block;width: 100%;height: 100%;
+}
+.priceBox{
+  background: rgba(0,0,0,0.5);height: 0.58rem;line-height: 0.58rem;
+  position: absolute;left: 0;bottom: 0.69rem;width: 100%;
+}
+.priceTrue{float: left; height: 100%;font-size: 0.26rem;color: #FF6666;margin-left: 0.1rem; }
+.priceFalse{float: right; height: 100%;color: #FFF;font-size: 0.2rem;margin-right: 0.1rem;}
+.rebateMore{
+  height: 0.8rem;line-height: 0.8rem;text-align: center;font-size: 0.26rem;color: #333;
+}
+
+
+.userTalk{height: 0.8rem;position: relative;}
+.userPic{
+  position: absolute;height: 100%;width: 0.8rem;top: 0;left: 0;
+}
+.userPic img{
+  width: 0.44rem;height: 0.44rem;margin: 0.18rem 0.11rem 0rem 0.17rem;border-radius: 50%;display: block;
+}
+.pockMark{
+  width: 0.8rem;height: 100%;position: absolute;top: 0;right: 0;
+}
+.pockName{
+  margin: 0rem 0.8rem;height: 100%;line-height: 0.8rem;font-size: 0.24rem;color: #333;
+  white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+}
+.pockMark img{
+  width: 0.44rem;height: 0.44rem;margin: 0.18rem auto;border-radius: 50%;display: block;
+}
+.lastBanner{
+  height: 4.44rem;position: relative;
+}
+.lastBanner img{
+  width: 100%;height: 100%;display: block;
+}
+.bannerTxt{
+  font-size: 0.28rem;text-align: center;
+  height: 0.28rem;width: 100%;position: absolute;
+  left: 0;bottom: 1.3rem;color: #FFF;
+}
+.deceived{
+  width: 1.68rem;height: 0.5rem;border: 1px solid #FFF;
+  font-size: 0.28rem;text-align: center;line-height: 0.5rem;
+  position: absolute;left: 50%;margin-left: -0.89rem;bottom: 0.56rem;
+  color: #FFF;border-radius: 5px;
+}
+.last_nominate{margin-bottom: 0.34rem;}
+
+
+.bottomBar{
+  position: fixed;z-index: 999;left: 0;bottom: 0;
+  width: 100%;height: 0.95rem;font-size: 0.2rem;
+  background: #FFF;
+}
+.barIcon{
+  height: 0.56rem;
+}
+.barIcon img{
+  width: 0.34rem;height: 0.34rem;display: block;margin: 0rem auto;
+  position: relative;top: 0.13rem;
+}
+.barName{
+  height: 0.39rem;line-height: 0.39rem;text-align: center;
+}
+.col_cur .barName{color: #FA004B;}
+
+.ui-col a .barName{
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bn{}

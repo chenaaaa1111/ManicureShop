@@ -1,0 +1,65 @@
+html,body{
+  width: 100%;height: 100%;background: #FFF;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.top{padding-top: 0.56rem;}
+.header{
+  margin: 0rem 0.24rem 0rem;height: 0.62rem;background: #F8F8F8;
+  border: 1px solid #E7E7E7;border-radius: 5px;line-height: 0rem;
+}
+.header input{
+  width: 100%;height: 0.6rem;border: none;text-indent: 0.4rem;font-size: 0.24rem;line-height: 0.6rem;
+}
+.navBox{
+  height: 0.66rem;margin: 0rem 0.24rem;position: relative;
+}
+.navBox .brand{
+  font-size: 0.34rem;color: #FD0349;font-weight: 500;line-height: 0.66rem;height: 0.66rem;
+  position: absolute;top: 0;left: 0;width: 1.3rem;
+}
+.navBox .navUl{
+  height: 0.66rem;list-style: none;margin-left: 1.3rem;
+}
+.navUl li{
+  width: 25%;height: 100%;float: left;font-size: 0.28rem;line-height: 0.66rem;color: #333;
+  text-align: right;
+}
+.navUl li:first-child{text-align: center;}
+.bannerBox{
+  height: 2.26rem;
+}
+.bannerBox img{
+  display: block;width: 100%;height: 100%;
+}
+.circleBox{padding-top: 0.05rem;}
+.circleBox .ui-row-flex .ui-col{
+  padding-top: 0.28rem;
+}
+
+.circle{width: 0.9rem;height: 0.9rem;border-radius: 50%;background: crimson;margin: 0 auto;}
+.info{
+  color: #333;font-size: 0.28rem;line-height: 0.39rem;margin-top: 0.1rem;text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nb{}

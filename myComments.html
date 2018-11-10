@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评论列表</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="lib/vue-scroller.js"></script>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/myComments.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+
+    <script type="text/javascript" src="js/rem.js" ></script>
+</head>
+<body>
+<div id="app">
+
+    <div class="colllists">
+
+        <div class="head">
+            <div class="headTitle">我的评论</div>
+            <div class="back">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-back-m"></use>
+                </svg>
+            </div>
+        </div>
+        <scroller ref="myscroller"
+                  :on-infinite="infinite"
+                  style="padding-top: 44px;">
+            <div v-for="(item, index) in list" :class="item.hide?'conItem hide':'conItem'">
+            <div class="imgleft">
+                <img class="leftImg" src="images/index/Pic_06.png">
+            </div>
+            <div class="righttext">
+                <div class="title">
+                   <img class="avatimg"   src="images/index/Pic_06.png" alt="">
+                    <p class="pname">{{item.title}}</p>
+                    <div class="comment">评论了你</div>
+                    <div class="date">{{item.date}}</div>
+                    <div v-if="item.name" class="redCircle">
+                        
+                    </div>
+                </div>
+
+                <div class="guige">{{item.content}}</div>
+                <p class="price"> <button v-on:click="removecollection" class="cancezan" :id="item.id">回复</button>  </p>
+            </div>
+        </div>
+        </scroller>
+
+    </div>
+    <div class="bottom" v-if="showInput"><input v-focus v-on:blur="bindblur" v-on:keyup.13="submit" type="text" placeholder="说点什么吧" /></div>
+</div>
+
+<script src="js/myCollection.js"></script>
+<script type="text/javascript">
+    var vm=new Vue({
+        el:"#app",
+        noData:'',
+        data:function(e){
+            return {
+                replyId:-1,//回复id
+                showInput:false,
+            list:[{
+                id:1,
+                title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                guige:'一套',
+                date:'9:00',
+                content:'哈哈哈哈哈哈哈啊哈就是离开jfk了世界的分厘卡时间了开发技术',
+                name:'xiaoming',
+                price:'48'
+            },
+                {
+                    id:2,
+                    title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                    guige:'一套',
+                    content:'哈哈哈哈哈哈哈啊哈就是离开jfk了世界的分厘卡时间了开发技术',
+                    date:'9:00',
+                    name:'xiaoming',
+                    price:'48'
+                },
+                {
+                    id:3,
+                    title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                    guige:'一套',
+                    content:'哈哈哈哈哈哈哈啊哈就是离开jfk了世界的分厘卡时间了开发技术',
+                    date:'9:00',
+                    name:'xiaoming',
+                    price:'48'
+                }
+
+            ]
+
+        }},
+        directives: {
+            focus: {
+                // 当绑定元素插入到 DOM 中。
+                inserted: function (el) {
+                    // 聚焦元素
+                    el.focus()
+                }
+            }
+        },
+        methods:{
+            bindblur:function (e) {
+                this.showInput=false;//显示文本框
+            },
+            submit:function(e){//回复方法
+                var id=this.replyId;//获得回复id
+                this.showInput=false;
+                console.log('回复');
+            },
+            removecollection:function(e){
+                var id=e.target.id;
+                this.replyId=id;//回复id
+                this.showInput=true;//显示文本框
+
+            },
+            infinite:function(done){
+                console.log('底部');
+                var list=[
+                    {
+                        id:4,
+                        title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                        guige:'一套',
+                        price:'48'
+                    },
+                    {
+                        id:5,
+                        title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                        guige:'一套',
+                        price:'48'
+                    },
+                    {
+                        id:6,
+                        title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                        guige:'一套',
+                        price:'48'
+                    }]
+
+                if(false){
+
+
+                }  else{
+                    // vm.noData="没有更多数据";
+                    vm.$refs.myscroller.finishInfinite(true);
+                }
+
+
+
+            }
+        },
+        beforeMount: function () {
+            var self=this;
+            $.ajax({
+                url:'',
+                data:'',
+                success:function(res){
+//
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>

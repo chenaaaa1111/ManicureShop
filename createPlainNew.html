@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>生成方案</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" type="text/css" href="css/commens.css">
+    <link rel="stylesheet" href="css/createPlainnew.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+     <script type="text/javascript" src="lib/vue-scroller.js"></script>
+  <!-- import stylesheet -->
+  <!-- import iView -->
+   
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</head>
+<body>
+  <div id="app">
+    <div class="wrapper">
+      <div class="top">
+       <div class="head">
+              <div class="title">生成方案</div>
+              <div class="left" onclick="goback()">
+                  <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-back-m"></use>
+                  </svg>
+              </div>
+               <div class="right">
+                   <span @click="edit(this)">新建</span>
+               </div>
+          </div>
+      </div>
+
+              <div class="tabs change_list">
+                <div class="love active_content">
+                  <div class="card">                 
+                    <div v-for="">                    
+                         <p class="handName"></p>
+                                 <ul class="ulflex"  >
+                                  <li   id="left1" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.left1&&chooseIds.left1.left1" for="">
+                                                              <img  ref="img" :src="chooseIds.left1.left1" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.left1&&chooseIds.left1.left1?chooseIds.left1.left1:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li  id="left2" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.left2&&chooseIds.left2.left2" for="">
+                                                              <img  ref="img" :src="chooseIds.left2.left2" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.left2&&chooseIds.left2.left2?chooseIds.left2.left2:''" data-key="ykey" type="text"  name="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li   id="left3" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.left3&&chooseIds.left3.left3" for="">
+                                                              <img  ref="img" :src="chooseIds.left3.left3" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.left3&&chooseIds.left3.left3?chooseIds.left3.left3:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li   id="left4" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.left4&&chooseIds.left4.left4" for="">
+                                                              <img  ref="img" :src="chooseIds.left4.left4" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.left4&&chooseIds.left4.right5?chooseIds.left4.left4:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li   id="left5" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.left5&&chooseIds.left5.left5" for="">
+                                                              <img  ref="img" :src="chooseIds.left5.left5" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">                                                            
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.left5&&chooseIds.left5.left5?chooseIds.left5.left5:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                              </ul>
+                    </div>
+                    <div class="handText">
+                        <p>左手</p>
+                        <img src="./images/my/leftHand.png"  class="bighand">
+                    </div>
+                  </div>   
+                   <div class="card">                 
+                    <div >                    
+                         <p class="handName"></p>
+                                 <ul class="ulflex"  id="righthand">
+                                  <li   id="right1" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.right1&&chooseIds.right1.right1" for="">
+                                                              <img  ref="img" :src="chooseIds.right1.right1" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.right1&&chooseIds.right1.right1?chooseIds.right1.right1:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li   id="right2" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.right2&&chooseIds.right2.right2" for="">
+                                                              <img  ref="img" :src="chooseIds.right2.right2" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.right2&&chooseIds.right2.right2?chooseIds.right2.right2:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li   id="right3" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.right3&&chooseIds.right3.right3" for="">
+                                                              <img  ref="img" :src="chooseIds.right3.right3" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.right3&&chooseIds.right3.right3?chooseIds.right3.right3:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li   id="right4" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.right4&&chooseIds.right4.right4" for="">
+                                                              <img  ref="img" :src="chooseIds.right4.right4" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input click='changeFile()' :value="chooseIds.right4&&chooseIds.right4.right4?chooseIds.right4.right4:''" data-key="ykey" type="text"  name="" id="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                                      <li   id="right5" @click="addchooseIds">
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="chooseIds&&chooseIds.right5&&chooseIds.right5.right5" for="">
+                                                              <img  ref="img" :src="chooseIds.right5.right5" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  for="">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+
+                                                      <input click='changeFile()'  :value="chooseIds.right5&&chooseIds.right5.right5?chooseIds.right5.right5:''" data-key="ykey" type="text"  name="" class="el-upload__input">
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle"></div>               
+                                  </li>
+                              </ul>
+                    </div>
+                    <div class="handText">
+                        <p>左手</p>
+                        <img src="./images/my/leftHand.png"  class="bighand">
+                    </div>
+                  </div>             
+                </div>
+              </div>
+                <button id="save" class="save" @click="saveplain" >保存方案</button>
+                <button id="reset" class="reset" @click="reset" >重置</button>
+      
+      </div>
+  </div>
+    <script type="text/javascript">
+      var vm=new Vue({
+        el:"#app",
+        data:function(){
+          return ({
+                  imageUrl:false,
+                  chooseIds:{}
+                })
+        },
+        methods:{
+            saveplain:function (event) {
+
+            },
+            reset:function(event){
+                localStorage.setItem('chooseIds','');
+                localStorage.setItem('chooseId','');
+                this.chooseIds={};
+            },
+            addchooseIds:function (event) {
+                console.log(event.currentTarget.id);
+                var chooseId=localStorage.setItem('chooseId',event.currentTarget.id);
+                location.href="mychooseImageplainNew.html";
+            },
+          getUrlParame:function(name){
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                 var r = window.location.search.substr(1).match(reg);
+                 if(r!=null)return  unescape(r[2]); return null;
+            },
+          changeFile:function(file,item){
+            var self=this;
+            var handKey=file.currentTarget.getAttribute('data-key');//获取key
+            var imgUrl=this.getUrlParame("imgUrl");
+            console.log(imgUrl)
+            this.plainList.forEach(function(val,key){
+                 console.log(val,key)
+                 val.itemList[0].handImgList.forEach(function(img,imkey){
+                      if(img==item){
+                        console.log('imkey',imkey);
+                        imkey.url=imgUrl;
+                        vm.$set(self.plainList[handKey].itemList[0].handImgList[imkey],'url',imgUrl);
+
+                      }
+                 })
+            })
+
+          },
+            edit:function () {
+
+            },
+          infinite:function(done){
+
+          }
+
+        },
+        mounted:function(){
+            var imgUrl=this.getUrlParame('imgUrl');
+            var chooseId=localStorage.getItem('chooseId');
+            var chooseIds=localStorage.getItem('chooseIds')?JSON.parse(localStorage.getItem('chooseIds')): {};
+            var obj={};
+            obj[chooseId]=imgUrl;
+            chooseIds[chooseId]=obj;
+            console.log('chooseIds',chooseIds);
+            var isHas=false;
+
+            var element='';
+             this.chooseIds=chooseIds;
+             localStorage.setItem('chooseIds',JSON.stringify(chooseIds));
+        }
+      })
+    </script>
+    <script>
+        $(function(){
+            function  getUrlParame(name){
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if(r!=null)return  unescape(r[2]); return null;
+            }
+          $('.ulflex li').click(function(){
+
+          })
+//            function init() {
+//                var imgUrl=getUrlParame('imgUrl');
+//                var chooseId=localStorage.getItem('chooseId');
+//                var chooseIds=localStorage.getItem('chooseIds')?JSON.parse(localStorage.getItem('chooseIds')): {};
+//                var obj={};
+//                obj[chooseId]=imgUrl;
+//                chooseIds[chooseId]=obj;
+//                console.log(chooseIds);
+//                var isHas=false;
+//
+//                var element='';
+//
+//                localStorage.setItem('chooseIds',JSON.stringify(chooseIds));
+//            }
+//            init();
+        })
+    </script>
+</body>
+
+</html>

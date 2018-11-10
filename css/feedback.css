@@ -1,0 +1,36 @@
+body{background-color: #F4F4F4;}
+html,body{width: 100%;height: 100%;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.head{
+    width: 100%;height: 0.98rem;padding-top: 0.49rem;line-height: 0.98rem;text-align: center;
+    color: #FFF;position: relative;background: #FF4C8E;
+}
+.headTitle{
+    margin: 0rem 0.98rem;height: 100%;font-size: 0.3rem;
+}
+.back{
+    width: 0.98rem;height: 100%;font-size: 0.3rem;left: 0;top: 0.49rem;
+    position: absolute;text-align: left;text-indent: 0.24rem;font-size: 0.4rem;
+}
+.message{
+    height: 1rem;background: #fff;font-size: 0.3rem;line-height: 1rem;text-align: center;color: #333;
+    line-height: 1rem;
+}
+
+
+.ui-list li h4{
+    font-size: .30rem;
+    padding-right: .5rem;
+}
+.payitem ui-txt-info{
+    color: #999;
+    height: .84rem;
+}
+.weidu{
+    color: red;
+}

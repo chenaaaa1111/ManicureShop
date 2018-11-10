@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善资料</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+
+        <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/perfectNext.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="lib/jquery.form.js"></script>
+     <script type="text/javascript" src="css/font/iconfont.js" ></script>
+
+    <script type="text/javascript" src="js/rem.js" ></script>
+   
+</head>
+<body>
+    <div id="app" @click="click">
+            <div class="title">完善资料</div>
+            <div class="tips">完善资料以便为您提供更好的服务</div>
+            <form id='comform'  action="http://www.baidu.com" enctype="multipart/form-data" method="post">
+                 <div class="ch-row">
+                <div class="ch-col ui-col-30 uptext">
+                    上传头像
+                </div>
+                <div class="ch-col ui-col-70">
+                   <div class="avatar-uploader">
+                    <div tabindex="0" class="el-upload el-upload--text">
+                        <label v-if="imageUrl" for="imgUp">
+                                <img  ref="img" :src="imageUrl" class="avatar"/>
+                        </label> 
+                        <label v-else  for="imgUp">
+                            <i class="el-icon-plus avatar-uploader-icon">
+                                
+                            </i>
+                        </label>
+                        <input @change='changeFile' type="file" name="imgUp" id="imgUp" class="el-upload__input">              
+                    </div>
+                </div>
+
+                </div>
+                      
+            </div> 
+            <div class="name">性别</div>              
+            <div class="ui-form-item ui-form-item-radio ui-border-b">
+                    <label class="ui-radio" for="sex">
+                        <input type="radio" value="1" name="sex">
+                    </label>
+                    <span>男</span>
+                     <label class="ui-radio" for="sex">
+                        <input type="radio" value="2" name="sex">
+                    </label>
+                    <span>女</span>
+                </div>
+            <div class="name sub">生日</div>
+            <div class="write">
+                <div class="inputBox">
+                    <input type="date" placeholder="请输入您的生日"/>
+                </div>
+                <div class="next cur" @click='commit'>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-right"></use>
+                    </svg>
+                </div>
+        </div>
+            </form>
+    
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+ <script type="text/javascript">
+    var value=2;
+    $('input[name=sex]').each(function(key,val){
+        if($(val).val()==value){
+            $(val).prop('checked','checked');
+        }
+    })
+
+</script>
+<script type="text/javascript">
+  var vm= new Vue({
+        el:"#app",
+        data:{
+            imageUrl:'',
+            fileImage:'',
+            title:0
+        },
+        methods:{
+            click:e=>{
+
+                vm.$set(vm.$data,'title',999);
+                vm.$data.title='888';
+                console.log(this.title);
+            },
+            handleAvatarSuccess:function(res,file){
+                this.imageUrl = URL.createObjectURL(file.raw);  
+                          },
+            beforeAvatarUpload:function(file){
+                const isJPG = file.type === 'image/jpeg';
+                const isLt2M = file.size / 1024 / 1024 < 2;
+                this.fileImage=file;
+                return isJPG && isLt2M;
+            },
+            upload:file=>{
+                return false;
+            },
+            changeFile: (file)=>{
+                var file=document.getElementById('imgUp').files;
+                console.log('file))',file);
+                var self=this;
+                 var imgfile= window.URL.createObjectURL(file[0]);  
+                 vm.imageUrl=imgfile;
+                 console.log(vm.imageUrl==this.imageUrl);
+                 this.fileImage=file;
+                          
+            },
+            commit:res=>{
+                var self=this;
+                console.log(self.fileImage);
+                var file=$('.el-upload__input').val();
+                console.log('file',$('.el-upload__input').val());
+                var formData = new FormData(); 
+                formData.append('imgfile',self.fileImage);
+                var formlists=$("#comform").ajaxSubmit({
+                    success:function(res){
+                        console.log('提交成功');
+                    },
+                    error:function(res){
+
+                    }
+                });
+                        }
+        }
+    });
+
+        var formlists=$("#comform").ajaxSubmit({});
+
+</script>
+</body>
+</html>

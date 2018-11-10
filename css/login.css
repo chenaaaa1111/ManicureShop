@@ -1,0 +1,64 @@
+body{background-color: #FFF;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.titleInfo{
+    font-size: 0.48rem;color: #333;margin: 2.5rem 0.24rem 0.54rem;
+}
+.tips{
+    font-size: 0.3rem;color: #999;
+    margin: 0rem 0.24rem 0.76rem;
+}
+.device{
+    margin: 0rem 0.24rem 0.35rem;font-size: 0.26rem;color: #333;
+}
+.phoneBox{
+    height: 0.65rem;position: relative;margin: 0rem 0.24rem 1.75rem;
+    font-size: 0.48rem;line-height: 0.48rem;
+}
+.circle{
+    position: absolute;width: 0.64rem;height: 0.64rem;
+    top: 0;right: 0;border-radius: 50%;
+    font-size: 0.48rem;line-height: 0.64rem;text-align: center;
+    background-color: #D1D1D1;color: #FFF;
+}
+
+.prefix{
+    position: absolute;height: 0.64rem;color: #999;border-bottom: 1px solid #999;
+    top: 0;left: 0;  font-size: 0.48rem;line-height: 0.64rem;text-align: center;
+}
+.phone{
+    height: 0.64rem;margin: 0rem 0.9rem 0rem 1.08rem;border-bottom: 1px solid #999;
+    font-size: 0.48rem;line-height: 0.64rem;
+}
+.phone input{
+    width: 100%;border: 0;height: 0.64rem;color: #333;
+    text-indent: 0.08rem;
+}
+.boxActive .circle{
+    background-color: #FA004B;
+}
+.boxActive .phone{
+    border-bottom: 1px solid #FA004B;
+}
+.other{margin: 0rem 0.9rem 0rem 1.08rem;}
+
+.ui-whitespace .alipay .otherIcon{
+    margin: 0rem auto;
+}
+.ui-whitespace .user .otherIcon{
+    float: right;
+}
+.otherIcon{
+    width: 0.64rem;height: 0.64rem;padding: 0;color: #999;
+    border-radius: 50%;font-size: 0.64rem;line-height: 0.64rem;
+}
+.cur .otherIcon{
+    color: #00CF05;
+}
+.icon-shenfenzheng{
+        font-size: .65rem;
+}

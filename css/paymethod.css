@@ -1,0 +1,109 @@
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.conitem{
+    padding-left:0.24rem;
+    padding-right: 0.24rem;
+}
+.top{
+    height: 0.98rem;padding-top: 0.49rem;background-color: #FF4F89;
+}
+.head{
+    height: 0.98rem;position: relative;
+}
+.title{
+    margin: 0rem 0.98rem;height: 100%;line-height: 0.98rem;font-size: 0.32rem;color: #FFF;text-align: center;
+}
+.head .left{
+    width: 0.98rem;height: 100%;position: absolute;top: 0;left: 0;
+    font-size: 0.32rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.26rem;
+}
+.head .right{
+    width: 0.98rem;height: 100%;position: absolute;top: 0;right: 0;
+    font-size: 0.24rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.24rem;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/*头部样式*/
+
+.listBox{margin-top: 0.2rem;}
+.listBox .ui-list-single > li{
+    height: 0.88rem;padding-left: 0.24rem;margin-left: 0;
+}
+.listBox .ui-nowrap{
+    font-size: 0.3rem; color: #333;
+}
+.listBox .ui-list-info{padding-right: 0.24rem;}
+.listBox .ui-txt-info{
+    font-size: 0.3rem;color: #666;
+}
+.listBox  .moneyColor{
+    color: #ff4f89;
+}
+.tips{
+    font-size: 0.3rem;color: #999;height: 0.3rem;line-height: 0.3rem;
+    padding: 0.36rem 0.24rem 0.18rem;
+}
+.pay{
+    height: 1rem;background: #FFF;position: relative;
+}
+.zfb{
+    position: absolute;width: 0.58rem;height: 0.58rem;overflow: hidden;
+    border-radius: 0.08rem;top: 0.21rem;left: 0.34rem;font-size: 0.58rem;
+    line-height: 0.58rem;color: #1296DB;text-align: center;
+}
+.wx{
+    font-size: 0.54rem;padding-top: 0.01rem;color: #00AD19;
+}
+.check{
+    width: 1rem;height: 1rem;position: absolute;top: 0;right: 0;
+}
+.check .ui-checkbox{
+    display: block;height: 100%;
+}
+.check .ui-checkbox input{
+    position: absolute;top: 0;left: 0;
+}
+.check .ui-checkbox input:before, .check .ui-checkbox-s input:before{
+    font-size: 0.32rem;top: 0.5rem;left: 0.26rem;line-height: 0;
+}
+.payName{
+    margin: 0rem 1rem 0rem 1.12rem;height: 100%;line-height: 1rem;
+    font-size: 0.3rem;color: #333;
+}
+.confrim{
+    height: 0.76rem;background: #fff;color: #ff4f89;
+    font-size: 0.3rem;line-height: 0.76rem;margin: 0.4rem 0.24rem;
+    border-radius: 0.08rem;box-shadow: 0rem 0.05rem 0.05rem #f38bad;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

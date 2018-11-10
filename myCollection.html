@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的收藏</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="lib/vue-scroller.js"></script>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/myCollection.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+
+    <script type="text/javascript" src="js/rem.js" ></script>
+</head>
+<body>
+<div id="app">
+    
+<div class="colllists">
+   
+    <div class="head">
+            <div class="headTitle">我的收藏</div>
+            <div class="back">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-back-m"></use>
+                </svg>
+            </div>
+    </div>
+      <scroller ref="myscroller"
+            :on-infinite="infinite"
+            style="padding-top: 44px;">
+<!--    <div style="height: 1px"></div>
+ -->     <div v-for="(item, index) in list" :class="item.hide?'conItem hide':'conItem'">
+            <div class="imgleft">
+                <img class="leftImg" src="images/index/Pic_06.png">
+            </div>
+            <div class="righttext">
+                  <p>{{item.title}}</p>
+                <p class="guige"> 规格 : <span>{{item.guige}}</span></p>
+                <p class="price"> <span class="num">¥48</span> <button v-on:click="removecollection" class="cancezan" :id="item.id">取消收藏</button>  </p>
+            </div>
+      </div>
+  </scroller>
+      
+   </div>
+
+    </div>
+
+<script src="js/myCollection.js"></script>
+<script type="text/javascript">
+    var vm=new Vue({
+        el:"#app",
+        noData:'',
+        data:{
+            list:[{
+                id:1,
+                title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                guige:'一套',
+                price:'48'
+            },
+            {
+                id:2,
+                title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                guige:'一套',
+                price:'48'
+            },
+            {
+                id:3,
+                title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                guige:'一套',
+                price:'48'
+            }
+
+            ]
+
+        },
+        methods:{
+            removecollection:function(e){
+                var id=e.target.id;
+                var list=[];
+                this.list.forEach(function(val,key){
+                    
+                    if(val.id==id){
+                        val.hide=true;
+                    }
+                    list.push(val)
+                });
+                this.list=list;
+                $.ajax({
+                    //发送请求
+                    
+                })
+            },
+            infinite:function(done){
+                console.log('底部');
+                var list=[
+            {
+                id:4,
+                title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                guige:'一套',
+                price:'48'
+            },
+            {
+                id:5,
+                title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                guige:'一套',
+                price:'48'
+            },
+            {
+                id:6,
+                title:'2018全球最新款，打不烂换不掉，死不了，买到就是赚到',
+                guige:'一套',
+                price:'48'
+            }]
+           
+            if(true){
+                //加载数据放在这里
+                 // $.ajax({
+                 //    success:function(res){
+                 //       if(list.length>0){//
+                             vm.list=vm.list.concat(list)     
+                             done();  
+                 //        }else{
+                 //             vm.noData="没有更多数据";
+                 //             vm.$refs.myscroller.finishInfinite(true);
+                          
+                 //        }
+                 //    }
+
+                 // })
+            
+           }  else{
+                // vm.noData="没有更多数据";
+                 vm.$refs.myscroller.finishInfinite(true);
+            }
+                       
+            }
+        },
+      beforeMount: function () {
+        var self=this;
+            $.ajax({
+                url:'',
+                   data:'',
+                   success:function(res){
+                        this.list=res.data.list;
+                   } 
+        })
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="css/orderList.css">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+</head>
+<body>
+<div id="container">
+    <div class="top">
+        <div class="head">
+            <div class="title">我的订单</div>
+            <div class="left">
+                <svg class="icon" onclick="goback()" aria-hidden="true">
+                    <use xlink:href="#icon-back-m"></use>
+                </svg>
+            </div>
+            <ul class="headerList">
+                <li class="tab active" data-href="tab1">全部订单</li>
+                <li class="tab" data-href="tab2">待支付</li>
+                <li class="tab" data-href="tab3">支付成功</li>
+                <li class="tab" data-href="tab4">已取消</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div>
+    <div id="tab1">
+        <div class="orderList">
+
+            <div class="orderItem" id="s1">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div data-id="s1"   class="delete" onclick="delc()">删除订单</div> <div class="success topay" onclick="pay()">去支付</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success">交易成功</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab2">
+        <div class="orderList">
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success">交易成功</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success topay">去支付</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success">交易成功</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab3">
+        <div class="orderList">
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success">交易成功</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success topay">去支付</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success">交易成功</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab4">
+        <div class="orderList">
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success">交易成功</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orderItem">
+                <div class="itemtitle"><span>订单编号</span><span>10000001</span></div>
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> <div  class="delete">删除订单</div> <div class="success">交易成功</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function goback(){
+        
+    }
+    function delc() {//删除订单
+        $.ajax({
+            type: "GET",
+            url: "test.json",
+            data: {},
+            dataType: "json",
+            success: function(data){
+
+            }
+        });
+    }
+    function pay() {//去支付
+        $.ajax({
+            type: "GET",
+            url: "test.json",
+            data: {},
+            dataType: "json",
+            success: function(data){
+
+            }
+        });
+    }
+    $(function () {
+        $(".headerList li").click(function (e) {
+            $(e.target).addClass('active').siblings().removeClass('active');
+            console.log($(e.target).data("href"));
+            var id=$(e.target).data("href");
+            $("#"+id).css("display","block").siblings().css("display","none");
+        })
+    })
+</script>
+</body>
+</html>

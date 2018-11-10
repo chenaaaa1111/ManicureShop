@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>分享图片</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/shareImage.css"/>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+</head>
+<body>
+    <div id="app">
+       <div class="head">
+          <div class="headTitle">分享图片</div>
+          <div class="back">
+              <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-back-m"></use>
+              </svg>
+           </div>
+        </div>
+        <ul class="cardLists">
+            <li class="card inputcard mar_b_20 mar_t_20">
+                <input type="text " class="ititle" placeholder="请输入标题，最多不能超过20个字">
+            </li>
+
+             <li class="card inputcard mar_b_20 mar_t_20 ui-row phcard">
+                    <div  class="cardLeft ui-col ui-col-20">
+                        <span class="delete" v-if="!ismoved" > <img :id="imgId" @click="deleteImg" src="images/delete.png"> </span>
+                        <label class="fileImage" for="fileImage">
+                            <img :class="ismoved?'imgphoto':'imgphoto uped'" :src="imgpath||'images/photo.png'"></label>
+                        <input type="file" ref="FileImage" value="fileImg" @change="getFile" style="display: none" name="fileImage" id="fileImage">
+                    </div> 
+                    <div class="cardRight ui-col ui-col-80 upright">
+                       <div class="umMessage">
+                           仅限一张图片，且大小不宜大于1M
+                       </div>        
+                    </div>        
+
+            </li>
+            <li class="card inputcard  mar_t_20 ui-row n_b">
+                    <div  class="cardLeft ui-col ui-col-75">收费</div>
+                    <div v-if="isedit" class="cardRight ui-col ui-col-25">
+                        <span :class="ischoose?'btNum active':'btNum'" data-val="1" @click="changeFees">是</span>
+                        <span :class="!ischoose?'btNum active':'btNum'" data-val="2" v-on:click="changeFees">否</span>
+                    </div>
+                <div v-if="!isedit" class="cardRight ui-col ui-col-25">
+                    <span v-if="ischoose" >是</span>
+                    <span  v-if="!ischoose" >否</span>
+                </div>
+
+            </li>
+
+             <li class="card feesCard inputcard mar_b_20  ui-row">
+                   <div  class="cardLeft ui-col ui-col-30">价格</div>
+                 <div v-if="isedit" class="cardRight ui-col ui-col-70 price">
+                     <input type="text" class="pin" :readonly="read?'readonly':false" :value="fees" placeholder="请输入单张图片价格">
+                 </div>
+                    <div v-if="!isedit" class="cardRight ui-col ui-col-70 price">
+                       <span class="price">¥70</span>
+                    </div>
+
+            </li>
+            <li class="card inputcard mar_b_20 mar_t_20 ui-row  ">
+                   <div  class="cardLeft fencla ui-col ui-col-60">分类</div>
+                    <div class="cardRight ui-col ui-col-40  fenlei">
+                       <el-select v-model="value"  @change="changeVal" placeholder="请选择">
+                        <el-option
+                          v-for="item in options"
+                          :key="item.value"
+                          :label="item.label"
+                         
+                          :value="item.value">
+                        </el-option>
+                      </el-select>
+                    </div>
+            </li>
+             <li class="card inputcard mar_b_20 mar_t_20 ui-row">
+                   <div  class="cardLeft ui-col ui-col-15">简介</div>
+                    <div class="cardRight ui-col ui-col-85  shormessage">
+                        <div v-if="isedit">
+                            <textarea class="shormessage" placeholder="简要说明，不超过100个字"></textarea>
+                        </div>
+                        <div v-else="!isedit">
+                            <span>拉拉啊拉啦啦啦</span>
+                        </div>
+                    </div>
+            </li>
+            <li class="card inputcard mar_b_20 mar_t_30 btdiv">
+                <button class="macksure" @click="commit">确认发布</button>
+            </li>
+            <li class="mess" >上传图片成功后，审核通过后可在个人分享页看到分享内容</li>
+        </ul>
+
+    </div>
+   <script src="js/lib.js"></script>
+   <script type="text/javascript">
+   
+   </script>
+<script>
+    var Vue=new Vue({
+        el:"#app",
+        data:{
+            message:"",
+            allMessage:"",
+            showAll:false,
+            fees:'',
+            read:false,
+            imgpath:'',
+            imgId:'',
+            ismoved:true,
+            isedit:true,
+            ischoose:'',
+            value:'',
+            options: [{
+                value: '选项1',
+                label: '黄金糕'
+              }, {
+                value: '选项2',
+                label: '双皮奶'
+              }, {
+                value: '选项3',
+                label: '蚵仔煎'
+              }, {
+                value: '选项4',
+                label: '龙须面'
+              }, {
+                value: '选项5',
+                label: '北京烤鸭'
+             }]
+
+        },
+        methods:{
+            changeShowAll:function(e){
+
+            },
+            deleteImg:function(e){
+                console.log('删除');
+            },
+            commit:function(e){
+                console.log('提交信息');
+            },
+            changeVal:res=>{
+              console.log('选择',res);
+            },
+            changeFees:function(e){
+              var val=e.target.getAttribute('data-val');
+              if(val==1){
+                this.fees="免费"
+                this.read=true;
+              }else{
+                 this.fees=""
+                this.read=false;
+              }
+                this.ischoose=!this.ischoose;
+            },
+            getFile:function(e){
+                var self=this;
+                console.log('getFile',e);
+                var imgFile=e.target.files[0];
+                console.log(imgFile);
+                if(!window.FileReader){
+                    return;
+                }
+                var fileRead=new FileReader();
+                fileRead.readAsDataURL(imgFile);
+                fileRead.onloadend=function(){
+                    self.imgpath=this.result;
+                    console.log('result',this.result);
+                    self.ismoved=false;
+                    $.ajax({  //图片提交到服务器
+                          url:'',
+                          data:{url:self.imgUrl},
+                          success:function(res){
+
+                          }  
+
+                    })
+                }
+            },
+            deleteImg:function(e){
+                console.log('删除');
+                this.ismoved=true;
+                this.imgpath='';
+                console.log( Vue.$refs.FileImage.value='');
+                Vue.$refs.FileImage;
+
+            }
+        },
+        mounted:function(e){
+
+
+        }
+
+
+    })
+
+</script>
+</body>
+</html>

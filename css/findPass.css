@@ -1,0 +1,30 @@
+body{background-color: #FFF;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.loginInfo{margin-top: 0.3rem;}
+.loginInfo .ui-col{
+  font-size: 0.28rem;height: 0.64rem;line-height: 0.64rem;
+}
+.col-title{text-align: right;}
+.loginInfo .ui-input{height: 0.64rem;}
+.passTips{
+  font-size: 0.2rem;
+}
+.loginTips .ui-border-radius:before,.loginBtn .ui-border-radius:before{
+  border: 0;
+}
+/* .loginBtn{margin-top: 0.3rem;} */
+.loginBtn .ui-input{margin-right: 0;}
+.top{
+  height: 0.64rem;position: relative;margin-top: 0.56rem;font-size: 0.3rem;
+  text-align: center;color: #333;line-height: 0.64rem;
+}
+.back{
+  width: 0.64rem;height: 100%;position: absolute;top: 0;left: 0;font-size: 0.3rem;
+  text-align: center;line-height: 0.64rem;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>生成方案</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" type="text/css" href="css/commens.css">
+    <link rel="stylesheet" href="css/createPlain.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+     <script type="text/javascript" src="lib/vue-scroller.js"></script>
+  <!-- import stylesheet -->
+  <!-- import iView -->
+   
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</head>
+<body>
+  <div id="app">
+    <div class="wrapper">
+      <div class="top">
+       <div class="head">
+              <div class="title">生成方案</div>
+              <div class="left" onclick="goback()">
+                  <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-back-m"></use>
+                  </svg>
+              </div>
+               <div class="right">
+                   <span @click="edit(this)">新建</span>
+               </div>
+          </div>
+      </div>
+       <scroller ref="myscroller"
+            :on-infinite="infinite"
+            style="padding-top: 1.1rem">
+              <div class="tabs change_list">
+                <div class="love active_content">
+                  <div v-for="(item,ykey) in plainList" class="card">                 
+                    <div v-for="plain in item.itemList ">                    
+                         <p class="handName">{{plain.handName}}</p>
+                             <ul class="ulflex"  >
+                                  <li  v-for="(plainItem,index) in plain.handImgList" >
+                                      <div class="img_show" >
+                                              <div class="avatar-uploader">
+                                                  <div tabindex="0" class="el-upload el-upload--text">
+                                                      <label v-if="plainItem.url" :for="'imgUp'+ykey+index">
+                                                              <img  ref="img" :src="plainItem.url" class="avatar"/>
+                                                      </label> 
+                                                      <label v-else  :for="'imgUp'+ykey+index">
+                                                          <i class="el-icon-plus avatar-uploader-icon">
+                                                              
+                                                          </i>
+                                                      </label>
+                                                      <input @change='changeFile($event,plainItem)' :data-key="ykey" type="file"   :name="'imgUp'+ykey" :id="'imgUp'+ykey+index" class="el-upload__input">              
+                                                  </div>
+                                              </div>
+                                        </div>   
+                                        <div class="figgerTitle">{{plainItem.title}}</div>               
+                                  </li>
+                              </ul>  
+                    </div>
+                    <div class="handText">
+                        <p>{{item.handName}}</p>
+                        <img :src="item.handImg"  class="bighand">
+                    </div>
+                  </div>               
+                </div>
+              </div>
+        </scroller>
+      
+      </div>
+  </div>
+    <script type="text/javascript">
+      var vm=new Vue({
+        el:"#app",
+        data:function(){
+          return ({
+                  imageUrl:false,
+                  plainList:[
+                              {
+                                id:1,
+                                plainName:'免费', 
+                                handName:'左手',
+                                handImg:"./images/my/leftHand.png",              
+                                itemList:[{handName:'左手',handImgList:[
+                                                  {url:"./images/meijia1.png",title:'大拇指'},
+                                                   {url:"./images/meijia1.png",title:'食指'},
+                                                    {url:"",title:'中指'}, 
+                                                    {url:"./images/meijia1.png",title:'无名指'},
+                                                  {url:"./images/meijia1.png",title:'小拇指'}
+                                                          ]
+                                          },
+                                ]
+                              },
+                               {
+                                      id:2,
+                                      plainName:'免费',
+                                      handName:'右手',
+                                      handImg:"./images/my/rightHand.png",              
+                                      itemList:[{handImgList:[
+                                                     {url:"./images/meijia1.png",title:'大拇指'},
+                                                     {url:"./images/meijia1.png",title:'食指'}, 
+                                                     {url:"./images/meijia1.png",title:'中指'}, 
+                                                     {url:"",title:'无名指'},
+                                                     {url:"./images/meijia1.png",title:'小拇指'}, 
+                                          ]}]
+                                  }
+                            ]
+                })
+        },
+        methods:{
+          changeFile:function(file,item){
+            var self=this;
+            var handKey=file.currentTarget.getAttribute('data-key');//获取key
+            var imgUrl=window.URL.createObjectURL(file.currentTarget.files[0])
+            this.plainList.forEach(function(val,key){
+                 console.log(val,key)
+                 val.itemList[0].handImgList.forEach(function(img,imkey){
+                      if(img==item){
+                        console.log('imkey',imkey);
+                        imkey.url=imgUrl;
+                        vm.$set(self.plainList[handKey].itemList[0].handImgList[imkey],'url',imgUrl);
+
+                      }
+                 })
+            })
+
+          },
+            edit:function () {
+
+            },
+          infinite:function(done){
+             // $.ajax({  //逻辑和其它分页一样
+
+             // })
+          }
+
+        },
+        mounted:function(){
+
+        }
+      })
+    </script>
+</body>
+
+</html>

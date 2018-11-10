@@ -1,0 +1,185 @@
+body{background-color: #FCFCFC;}
+html,body{width: 100%;height: 100%;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+#app{
+    background: #eee;
+}
+.head{
+    width: 100%;height: 1.48rem;padding-top: 0.49rem;line-height: 0.98rem;text-align: center;
+    color: #FFF;position: relative;background: #FF4C8E;margin-bottom: 0.2rem;
+}
+.headTitle{
+    margin: 0rem 0.98rem;height: 100%;font-size: 0.3rem;
+}
+.back{
+    width: 0.98rem;height: 100%;font-size: 0.3rem;left: 0;top: 0.49rem;
+    position: absolute;text-align: left;text-indent: 0.24rem;font-size: 0.4rem;
+}
+.replyList{
+    padding: 0.25rem 0rem 0.1rem;background: #fff;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+    position: relative;min-height: 1.65rem;
+    margin-bottom: 0.2rem;
+}
+.replyList:after{
+    display: block;height: 0;content: '';clear: both;
+}
+
+*{
+	box-sizing: border-box;
+}
+.card{
+    display: flex;
+    font-size:.32rem;
+    background: #fff;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.inputcard{
+    padding:.32rem .24rem .32rem .24rem;
+}
+.ititle{
+    font-size: .36rem;
+    width: 100%;
+    border:none;
+}
+.mar_t_20{
+    margin-top: .2rem;
+}
+.mar_t_30{
+    margin-top: .3rem;
+}
+.mar_b_20{
+    margin-bottom: .2rem;
+
+}
+
+
+
+.btNum{
+	    width: .7rem;
+    display: inline-block;
+    height: .5rem;
+    border: 1px solid #f4f4f4;
+    border-radius: 40%;
+    text-align: center;
+}
+.btNum.active{
+	 background: #fe366a;
+	 color: #fff;
+}
+.price{
+	text-align: center;
+	color: #ff4a4a;
+}
+.fenlei{
+		text-align: center;
+}
+.ui-col-15{
+	width: 15%;
+}
+.shormessage{
+    height: 2rem;
+    border: none;
+    width: 5.5rem;
+}
+.fileImage{
+	      width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    line-height: 1rem;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    margin-top: .2rem;
+}
+.upright{
+	    line-height: 2rem;
+        padding-left: .4rem;
+}
+.cardLeft{
+	position: relative;
+}
+.delete{
+	position: absolute;
+    color: #ff4a4a;
+    right: -.3rem;
+    top: 0.1rem;
+}
+.delete img{
+   width: .4rem;
+}
+option{
+    font-size: .4rem;
+}
+.pin{
+    border: none;
+        text-align: right;
+    padding-right: .3rem;
+}
+.fencla{
+    line-height: .8rem; 
+}
+.macksure{
+    text-align: center;
+    width: 100%;
+    color: #ff4a8c;
+    margin-left: .2rem;
+    margin-right: .2rem;
+    border-radius: .05rem;
+}
+.btdiv{
+    margin-left: 0.2rem;
+    margin-right: .2rem;
+    border-radius: .1rem;
+    box-shadow: .02rem .02rem .1rem rgba(220,20,60,.2);
+}
+.cardLists li.mess{
+    font-size: .24rem;
+    text-align: center;
+    color: #999999;
+    margin-top: .38rem;
+    padding-bottom: .5rem;
+
+}
+.feesCard{
+    border-top: 1px solid #eee;
+}
+.umMessage{
+    color: #999;
+}
+.phcard{
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+.imgphoto{
+    width: 1rem;
+    margin-top: 0.35rem;
+
+}
+.el-select {
+    display: inline-block;
+    position: relative;
+    width: 3rem;
+    right: 0;
+    margin-left: 0.2rem;
+}
+.n_b{
+    border-bottom: none;
+}
+.uped{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0rem;
+}
+.grayContent{
+    width: 100%;height: .2rem;
+    background: #eee;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+}

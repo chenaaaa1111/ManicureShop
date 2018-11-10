@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>联系客服</title>
+</head>
+<link rel="stylesheet" href="./css/customer.css">
+<link rel="stylesheet" href="./css/common.css">
+
+<body>
+    <header class="link_customer">
+        <img src="./images/back.png" alt="">
+        联系客服
+    </header>
+    <div class="text_describle">
+        <textarea name="" id="" placeholder="请你输入您想问的问题以及联系方式，我们会尽快联系到您。"></textarea>
+    </div>
+    <div class="submit">
+        提交
+    </div>
+    <div class="question_list">
+        <div class="title">
+            猜您想问
+        </div>
+        <ul class="change_li">
+            <li class="activein">
+                <div class="title_list">
+                    购买未成功怎么办
+                    <img src="./images/towardright.png" alt="" class="towardright">
+                    <img src="./images/towarddown.png" alt="" class="towarddown">
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>1.如购买未成功，请返回“我的”-“我的订单”查看“已支付” 页面</li>
+                        <li>2.订单生成可能会有几秒钟延迟，请耐心等待。</li>
+                        <li>3.如果未购买成功，钱会原路返还到您的支付账户中，请您放心。</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="title_list">
+                    一次能打印多少图片
+                    <img src="./images/towardright.png" alt="" class="towardright">
+                    <img src="./images/towarddown.png" alt="" class="towarddown">
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>1.如购买未成功，请返回“我的”-“我的订单”查看“已支付” 页面</li>
+                        <li>2.订单生成可能会有几秒钟延迟，请耐心等待。</li>
+                        <li>3.如果未购买成功，钱会原路返还到您的支付账户中，请您放心。</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="./js/font-size.js"></script>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.change_li li .title_list').click(function () {
+                var className = $(this).parent().attr("class");
+                if (className) {
+                    $(this).parent().removeClass('activein');
+                } else {
+                    $(this).parent().addClass('activein').siblings().removeClass('activein');
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

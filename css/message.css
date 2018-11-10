@@ -1,0 +1,102 @@
+body{background-color: #F4F4F4;}
+html,body{width: 100%;height: 100%;}
+.wrapper{
+  position: absolute;width: 100%;top: 0;bottom: 0rem;height: auto;
+  overflow: auto;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.top{
+  height: 0.98rem;padding-top: 0.49rem;background-color: #FF4F89;
+}
+.head{
+    height: 0.98rem;position: relative;
+}
+.title{
+    margin: 0rem 0.98rem;height: 100%;line-height: 0.98rem;font-size: 0.32rem;color: #FFF;text-align: center;
+}
+.head .left{
+    width: 0.98rem;height: 100%;position: absolute;top: 0;left: 0;
+    font-size: 0.32rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.26rem;
+}
+.head .right{
+    width: 0.98rem;height: 100%;position: absolute;top: 0;right: 0;
+    font-size: 0.24rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.24rem;
+}
+.countBox{
+  margin-top: 0.2rem;margin-bottom: 0.2rem;background: #FFF;
+}
+.countBox::after{
+  display: block;height: 0;content: "";clear: both;
+}
+.countList{
+  width: 25%;float: left;position: relative;
+}
+.countPic{
+  width: 0.84rem;height: 0.84rem;border-radius: 50%;
+  margin: 0.38rem auto 0.22rem;overflow: hidden;
+}
+.countPic img{
+  display: block;width: 100%;height: 100%;
+}
+.msgCount{
+    position: absolute;height: 0.24rem;line-height: 0.24rem;
+    background: #FF2764;font-size: 0.24rem;padding: 0rem 0.1rem;border-radius: 0.12rem;
+    top: 0.34rem;left: 1.1rem;color: #FFF;
+}
+.countTxt{
+  text-align: center;color: #333;font-size: 0.28rem;line-height: 0.28rem;margin-bottom: 0.28rem;
+}
+
+.messageList{
+  border-top: 1px solid #F2F2F2;border-bottom: 1px solid #F2F2F2;margin-bottom: 0.1rem;background: #FFF;
+  position: relative;height: 1.34rem;
+}
+.messageList:first-child{}
+
+.msgTxt{
+  margin-left: 1.48rem;
+}
+.msgTxt .msgTitle{
+      font-size: 0.3rem;color: #333;
+      height: 0.3rem;
+      line-height: 0.3rem;
+      margin-top: 0.3rem;
+       white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+       padding-right: 1rem;
+}
+.msgTxt .msgDescribe{
+  font-size: 0.24rem;color: #666;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+  height: 0.24rem;line-height: 0.24rem;margin-top: 0.22rem;
+}
+.msgIcon{
+  width: 0.88rem;height: 0.88rem;background: #FF4894;position: absolute;top: 0.2rem;left: 0.3rem;
+  color: #FFF;text-align: center;
+}
+.msgIcon span{
+  display: block;height: 0.6rem;line-height: 0.3rem;font-size: 0.3rem;margin-top: 0.14rem;overflow: hidden;
+}
+.time{
+      position: absolute;
+      top: 0.3rem;
+      right: 0.4rem;
+      color: #999;
+
+}
+.redcircle{
+      width: .15rem;
+    height: .15rem;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+}

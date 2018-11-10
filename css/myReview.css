@@ -1,0 +1,170 @@
+body{background-color: #fff;}
+html,body{width: 100%;height: 100%;}
+*{
+    box-sizing: border-box;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.head{
+    width: 100%;height: 1.44rem;padding-top: 0.49rem;line-height: 0.98rem;text-align: center;
+    color: #FFF;position: relative;background: #FF4C8E;
+    z-index: 99999;
+}
+.headTitle{
+    margin: 0rem 0.98rem;height: 100%;font-size: 0.3rem;
+}
+.back{
+    width: 0.98rem;height: 100%;font-size: 0.3rem;left: 0;top: 0.49rem;
+    position: absolute;text-align: left;text-indent: 0.24rem;font-size: 0.4rem;
+}
+.picBox{
+    padding: 0.2rem 0rem;background: #FFF;border-top: 1px solid #E7E7E7;
+}
+.picBox:after{
+    display: block;height: 0;content: '';clear: both;
+}
+.list{
+    width: 2.9rem;padding-top: 2.9rem;
+    float: left;position: relative;margin-bottom: 0.3rem;
+}
+.list img{
+    display: block;width: 2.9rem;height: 2.9rem;
+    top: 0rem;border-radius: 8px;
+    position: absolute;
+}
+.picBox .list:nth-child(odd){
+    margin-left: 0.44rem;
+}
+.picBox .list:nth-child(even){
+    margin-right: 0.44rem;float: right;
+}
+.choose{
+    width: 0.3rem;height: 0.3rem;position: absolute;top: 0.12rem;right: 0.12rem;
+    border-radius: 50%;overflow: hidden;
+}
+
+.choose img{
+    display: block;width: 100%;height: 100%;
+}
+
+/*card 样式*/
+/*审核状态栏的样式*/
+ .state{
+ 	    display: flex;
+    /*padding:.10rem 0 .10rem .10rem;*/
+    height: 0.89rem;
+    margin-top: .2rem;
+    position: fixed;
+    z-index:9999;
+    width: 100%;
+    margin-top: ,2rem;
+    /*margin-left: .14rem;*/
+   /* margin-right: .14rem;*/
+    background: #fff;
+   
+   justify-content: space-around;
+ 
+ }
+ .state p{
+ 	   font-size:0.30rem;
+ 	   padding:0.20rem 0;
+ }
+ .review-under{
+ 	color: #fe366a;
+ }
+.conItem{
+    display: flex;
+    padding:.33rem 0 .26rem .24rem;
+    height: 2.57rem;
+    border: 1px solid #e4e4e4;
+    border-radius: .12rem;
+    background: #fff;
+}
+.imgleft{
+    padding-right:.24rem;
+}
+.leftImg{
+    width: 2rem;
+    height: 2rem;
+    
+}
+.righttext{
+    padding-top: 0rem;
+}
+.righttext p{
+    font-size: .3rem;
+    flex: 1;
+    width:2.2rem;
+   overflow:hidden;
+    text-overflow:ellipsis;
+    flex:1;
+}
+.righttext p.title{
+    width: 4rem;
+    display: -webkit-box;    
+    -webkit-box-orient: vertical;    
+    -webkit-line-clamp: 2;    
+    overflow: hidden;
+}
+.righttext{
+    display: flex;
+    flex-direction: column;
+}
+.kind{
+	    display: flex;
+    flex-direction: row;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+.cancezan{
+        width: 1.44rem;
+    line-height: .5rem;
+    color: #999;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin-left: 2rem;
+    position: absolute;
+}
+.guige{
+    color: #999;
+    height: .40rem;
+}
+.num{
+	   color: #fe366a;
+}
+.price{
+    /*line-height: .8rem;*/
+    color: rgb(153, 153, 153);
+    position: relative ;
+}
+.conItem{
+    margin-top: .2rem;
+}
+body{
+    background: #eee;
+}
+.hide{
+    display: none;
+}
+._v-content{
+    margin-top: 1.35rem;
+    padding-bottom: .8rem;
+}
+
+
+  .stateContent{
+    background: #e4e4e4;
+    height: 1rem;
+    position: fixed;
+    padding-top: 0rem;
+    z-index: 9999;
+    width: 100%;
+}
+
+
+
+

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>商品详情</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="lib/vue-scroller.js"></script>
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/details.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+
+    <script type="text/javascript" src="js/rem.js" ></script>
+  </head>
+  <body>
+    <div class="wrapper" id="app">
+      <!--新位置 ，有更改-->
+      <scroller ref="myscroller" class="myscroll"  
+            :on-infinite="infinite">
+      <div class="wrapInner">
+        <div class="top">
+          <img src="images/details/shopping.png" />
+          <div class="back">
+            <img src="images/details/back.png" />
+          </div>
+          <div class="card">
+            <img src="images/details/card.png" />
+          </div>
+        </div>
+        <div class="introduce">
+          <div class="txt noml">
+            绿萝仙子大红萝卜头
+          </div>
+          
+          <div class="price">
+            <span class="symbol">￥</span><span>1550.50</span>
+          </div>
+        </div>
+         <p class="message"> <p class="mess">
+          {{message}}
+       <span href="gomore" class="gomore" v-if="!showAll" v-on:click="changeShowAll">查看更多</span></p>
+      <div class="introduce">
+          <div class="txt">
+            绿萝仙子大红萝卜头
+          </div>
+          <div class="pic">
+            <div class="imgBox">
+              <img src="images/details/touxiang2.png" />
+            </div>
+          </div>
+        
+        </div>
+        <div class="ui-row-flex ui-whitespace details">
+          <div class="ui-col ui-col">
+            <div class="detailsInfo">
+              <span class="detailsTitle">喜欢</span><span>(1.2万)</span>
+            </div>
+            <div class="detailsIcon">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-xin"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="ui-col ui-col">
+            <div class="detailsInfo">
+              <span class="detailsTitle">分享</span><span>(9581)</span>
+            </div>
+            <div class="detailsIcon">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-share"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="ui-col ui-col">
+            <div class="detailsInfo">
+              <span class="detailsTitle">收藏</span><span>(453)</span>
+            </div>
+            <div class="detailsIcon">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-start"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+       
+       
+        <div class="commentBox" >
+          <div class="comment">评论</div>
+          <div class="inputBox">
+            <div class="boxInner">
+              <div class="inputWrap">
+                <input type="text"/>
+              </div>
+              <div class="send" >
+                发表
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lately">
+          <div class="lateHead">
+            <div class="lateTitle">
+              最近购买
+            </div>
+            <div class="lateInfo">
+              已经有2321个人退货并投诉
+            </div>
+          </div>
+          <div class="userBox">
+            <div class="userList">
+              <img src="images/details/touxiang1.png" />
+            </div>
+            <div class="userList">
+              <img src="images/details/touxiang2.png" />
+            </div>
+            <div class="userList">
+              <img src="images/details/touxiang3.png" />
+            </div>
+            <div class="userList">
+              <img src="images/details/touxiang4.png" />
+            </div>
+            <div class="userList">
+              <img src="images/details/touxiang5.png" />
+            </div>
+            <div class="userList">
+              <img src="images/details/touxiang1.png" />
+            </div>
+
+          </div>
+        </div>
+
+        <div class="lately">
+          <div class="lateHead">
+            <div class="lateTitle">
+              评论
+            </div>
+            <div class="lateInfo">
+              共2321条闲言碎语
+            </div>
+          </div>
+          <div class="floor">
+            <!-- 原来的删除 -->
+         <!--    <scroller ref="myscroller" class="myscroll"  height="400"
+            :on-infinite="infinite"> -->
+               <div class="landlord" v-for="item in commentsList" :id="item.id"  @click.capture='commetDetail'>
+              <div class="lordInfo">
+                <div class="landName">
+                  <div class="nameTxt">
+                    {{item.fromUserName}}
+                  </div>
+                  <div class="createDate">
+                         {{item.commentTime}}
+                  </div>
+                </div>
+                <div class="crap">
+                  {{item.commentTime}}
+                </div>
+              </div>
+              <div class="landUser">
+                <div class="landIcon">
+                  <img src="images/details/touxiang1.png" />
+                </div>
+              </div>
+
+            </div> 
+             <div v-if="isfromCommen" class="showAllcoments" @click="loadAllComments">查看全部评论</div>
+          </div>
+        </div>
+      </div>
+      </scroller>       <!--新位置 ，有更改-->
+
+      <!-- 新加评论弹框  对应的方法也需要加上-->
+      <div class="mengban" id="mengban" v-if="showmodal" @click='clicmenban'>
+        <div class="modol">
+          <!-- 新位置，有修改 -->
+         <scroller ref="myscrollerCommen"  
+            :on-infinite="infiniteCommen"> 
+          <div class="floor basBottom">
+                <div class="landlord"   @click='commetDetail'>
+              <div class="lordInfo">
+                <div class="landName">
+                  <div class="nameTxt">
+                    冰雪女王吉安娜
+                  </div>
+                  <div class="createDate">
+                    11.22 18:35
+                  </div>
+                </div>
+                <div class="crap">
+                  楼上那逼太恶心了，一个大男人天天逛美甲论坛，一看就是个Gai！！！
+                </div>
+              </div>
+              <div class="landUser">
+                <div class="landIcon">
+                  <img src="images/details/touxiang2.png" />
+                </div>
+              </div>
+            </div>
+             <!-- 分页组件 -->      
+             <!-- 原来的删除 -->
+         <!--  <scroller ref="myscrollerCommen"  
+            :on-infinite="infiniteCommen">  -->  
+            <div  v-for="item in commentsList" class="landlord followPoster">
+              <div class="lordInfo">
+                <div class="landName">
+                  <div class="nameTxt">
+                    {{item.fromUserName}}
+                  </div>
+                  <!-- <div class="createDate">
+                    11.22 18:37
+                  </div> -->
+                </div>
+                <div class="crap">
+                   {{item.content}}
+                </div>
+              </div>
+              <div class="landUser">
+                <div class="landIcon">
+                  <img :src="item.userImg" />
+                </div>
+              </div>
+            </div>
+                     
+          <!--  </scroller> -->
+          <!-- 新位置有修改 -->
+          </scroller>
+          </div> 
+          <div class="bottom">
+            <div class="diacommentBox" >
+              <div class="diacomment"  @click="showInputMethed">评论</div>
+                 <div class=" diainputBox" id="diaInput"   v-if="showInput">
+                       <div class="boxInner">
+                            <div  class="inputWrap">
+                              <input type="text" id="diavalue"/>
+                            </div>
+                            <div class="diasend" @click="commitComment">
+                              发表
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+               </div>
+          </div>
+        
+     </div>
+    </div>
+    <div class="footerBar">
+      <div class="addCard">
+        加入购物车
+      </div>
+      <div class="printing">
+        立即打印
+      </div>
+    </div>
+   
+   
+  <script>
+    $(function () {
+        $(".details").on("click",".ui-col",function () {
+            var index = $(this).index();
+            $(this).addClass("colCur").siblings().removeClass("colCur")
+            switch (index) {
+                case 0:
+                    alert('喜欢')
+                    break;
+                case 1:
+                    alert('分享')
+                    break;
+                case 2:
+                    alert('收藏')
+                    break;
+                default:
+                    break;
+            }
+        });
+        $(".comment").click(function () {
+            $(this).hide();
+            $(this).next().show();
+            $(this).next().find("input").focus();
+             $(".inputBox input").val('');
+
+        });
+        $(".send").click(function () {//增加输入框为空验证
+          if($(".inputBox input").val('')){
+            $(this).parents(".inputBox").hide();
+            $(this).parents(".inputBox").prev().show();
+          } 
+         
+        });
+        $(".inputBox input").blur(function () {
+            $(this).parents(".inputBox").hide();
+            $(this).parents(".inputBox").prev().show();
+        });
+    })
+  </script>
+  <script type="text/javascript">
+    var vm=new Vue({ 
+        el:"#app",
+        data:function(){
+          return {
+            height:'4rem',
+            message:"",
+            allMessage:" ",
+            "commentsList":[{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null}],
+            showAll:false,
+            showmodal:false,//改为false
+            showInput:false,
+            isDesible:false,
+            isfromCommen:false
+        }},
+        methods:{
+          loadAllComments:function(e){//新加 2018-11-07
+            this.isfromCommen=false;
+             // vm.$refs.myscrollerCommen.finishInfinite(true);//锁定数据
+            $.ajax({
+
+
+            })//请求所有数据
+          },
+          showInputMethed:function(e){
+              vm.showInput=true;
+          },
+            commitComment:function(e){
+                vm.showInput=true;
+            },
+            changeShowAll:function(e){
+              this.showAll=true,
+              this.message=this.allMessage;
+
+            },
+            commetDetail:function(e){
+              console.log(e.currentTarget.id);
+              var commentId=e.currentTarget.id;
+              this.commentId=commentId;
+              // 保存评论id 获取的时候直接通过this.commentId获取
+                 vm.showmodal=true;
+            },
+            clicmenban(e){
+              if(e.target.id=='mengban'){
+                  console.log(e.target.id);
+                  vm.showmodal=false;
+              }else{
+
+              }
+            },
+            infinite:function(done){//加载评论数据
+                           done(true)
+
+               if(this.isfromCommen){
+                done(false);
+              return;
+             }
+            
+              console.log('加载数据');
+              if(!this.commentsList||this.commentsList.length==0){
+                  return;
+              }
+              this.commentsList=this.commentsList.concat([{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null}])
+              console.log(this.commentsList);
+                if(true){
+                        
+                            var stime=[{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null},{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null},{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null},{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null}];
+                             console.log('加载数据');
+                             this.commentsList.concat(stime);  
+                              // done(true);            
+                             // setTimeout(function(){
+                                  done(false);  
+                             // },3000) 
+            
+            
+           }  else{
+                // vm.noData="没有更多数据";
+                 vm.$refs.myscroller.finishInfinite(true);//锁定数据
+            }
+            },
+            infiniteCommen:function(done){//加载恢复数据
+                console.log('加载恢复');
+                   if(true){  //这里需要判断数据长度，如果不为零加载
+                   done(true);
+            
+           }  else{
+                // vm.noData="没有更多数据";
+                 vm.$refs.myscrollerCommen.finishInfinite(true);//锁定数据
+            }
+            },
+            commitComment:function(e){
+              var comment=$('#diavalue').val();
+              vm.showInput=false;
+              $.ajax({
+                  url:'',
+                  success:function(res){
+
+                  }
+              })
+            },
+             getUrlParame:function(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+             var r = window.location.search.substr(1).match(reg);
+             if(r!=null)return  unescape(r[2]); return null;
+
+            }
+        },//methods
+        mounted:function(e){
+            // this.allMessage="哈哈哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈",
+            // this.message=this.allMessage.substring(0,20);
+            // console.log(this.message,this.allMessage);
+             var self=this;
+             var parame=this.getUrlParame('uid');
+             console.log('parame',parame);
+             if(parame){
+                self.isfromCommen=true;
+             }else{
+              return;
+             }
+            // $.ajax({
+            //   success:function(res){//根据id查询评论内容  
+                  self.commentsList=[{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null}];
+            //   }
+            // })
+
+        }
+
+
+    })
+    
+
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>消息中心</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./lib/dropload.css">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css"/>
+    <link rel="stylesheet" href="css/message.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="css/font/iconfont.js"></script>
+
+    <script type="text/javascript" src="js/rem.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="head">
+            <div class="title">消息中心</div>
+            <div class="left">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-back-m"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="countBox">
+        <div class="countList">
+            <div class="countPic">
+                <img src="images/my/praise.png"/>
+            </div>
+            <div class="countTxt">
+                赞
+            </div>
+            <div class="msgCount">99+</div>
+        </div>
+        <div class="countList">
+            <div class="countPic">
+                <img src="images/my/collection.png"/>
+            </div>
+            <div class="countTxt">
+                收藏
+            </div>
+            <div class="msgCount">99+</div>
+        </div>
+        <div class="countList">
+            <div class="countPic">
+                <img src="images/my/share.png"/>
+            </div>
+            <div class="countTxt">
+                分享
+            </div>
+            <div class="msgCount">99+</div>
+        </div>
+        <div class="countList">
+            <div class="countPic">
+                <img src="images/my/comment.png"/>
+            </div>
+            <div class="countTxt">
+                评论
+            </div>
+            <div class="msgCount">99+</div>
+        </div>
+    </div>
+    <div class="messageBox">
+        <div class="messageList">
+            <div class="msgTxt">
+                <div class="msgTitle">
+                    关于版本更新问题通知
+                    <div class="time">9:00</div>
+                    <div class="redcircle"></div>
+                </div>
+                <div class="msgDescribe">
+                    新版本修正了用户无法恢复碧油鸡，商场专区无法进入产品详情页的碧油鸡
+                </div>
+            </div>
+            <div class="msgIcon">
+                <span>红寇美甲</span>
+            </div>
+        </div>
+        <div class="messageList">
+            <div class="msgTxt">
+                <div class="msgTitle">
+                    关于版本更新问题通知
+                    <div class="time">9:00</div>
+                    <div class="redcircle"></div>
+                </div>
+                <div class="msgDescribe">
+                    新版本修正了用户无法恢复碧油鸡，商场专区无法进入产品详情页的碧油鸡
+                </div>
+            </div>
+            <div class="msgIcon">
+                <span>红寇美甲</span>
+            </div>
+        </div>
+        <div class="messageList">
+            <div class="msgTxt">
+                <div class="msgTitle">
+                    关于版本更新问题通知
+                 <div class="time">9:00</div>
+
+                </div>
+                <div class="msgDescribe">
+                    新版本修正了用户无法恢复碧油鸡，商场专区无法进入产品详情页的碧油鸡
+                </div>
+            </div>
+            <div class="msgIcon">
+                <span>红寇美甲</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/message.js"></script>
+<script type="text/javascript" src="./lib/dropload.js"></script>
+<script type="text/javascript">
+     var drop=$('.wrapper').dropload({
+        scrollArea : window,
+        loadfun:function(){
+         
+        },
+        autoLoad:true,
+        loadDownFn : function(me){
+            console.log('数据加载',123);
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/code.css"/>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+</head>
+<body>
+    <div id="app">
+            <div class="titleInfo">请输入验证码</div>
+<p class="tips">密码已发送至136****7383，请填写验证码</p>
+<div class="device">
+    验证码
+</div>
+<div :class=" ishideboad ?'phoneBox boxActive ':'phoneBox '">
+    <div class="phone">
+        <div class="ui-row-flex ui-whitespace">
+         <!--    <div class="ui-col ui-col number"></div>
+            <div class="ui-col ui-col number"></div>
+            <div class="ui-col ui-col number"></div>
+            <div class="ui-col ui-col number"></div>
+            <div class="ui-col ui-col number"></div>
+            <div class="ui-col ui-col number"></div> -->
+
+                <div class="security-code-wrap i-row-flex ui-whitespace">
+                    <label for="code" class="inputLabel">
+                      <ul class="security-code-container ui-row-flex ui-whitespace">
+                        <li class="field-wrap ui-col ui-col number" v-for="(item, index) in number" :key="index">
+                          <i class="char-field">{{value[index] || placeholder}}</i>
+                        </li>
+                      </ul>
+                    </label>
+                    <input ref="input" class="input-code" @keyup="handleInput($event)" 
+                    v-model="value" @focus="handleFocus" type="number" @onblur="handleBlur" 
+                           id="code" name="code" type="tel" :maxlength="number"
+                           autocorrect="off" autocomplete="off" autocapitalize="off">
+                   </div>
+            </div>
+         </div>
+        <div class="circle" @click="comment">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-right"></use>
+            </svg>
+        </div>
+        <div class="circle circle2">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-closec"></use>
+            </svg>
+        </div>
+
+        </div>
+        <div class="other error">
+            未收到？<span class="again">重新发送</span>
+        </div>
+        <div class="back">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-back-m"></use>
+            </svg>
+        </div>
+    </div>
+
+<!-- <script src="js/code.js"></script>
+ --><script type="text/javascript"> 
+    var vm=new Vue({
+    el:"#app",
+    data(){
+        return {
+            number:6,
+            value:'',
+            placeholder:'',
+            ishideboad:false
+        }
+      
+    },
+    methods:{
+         hideKeyboard() {
+        // 输入完成隐藏键盘
+            document.activeElement.blur() // ios隐藏键盘
+            this.$refs.input.blur() // android隐藏键盘
+            this.ishideboad=true;
+            this.$refs.input.value
+          },
+          handleSubmit() {
+            this.$emit('input', this.value);
+            this.$emit('handleInput', this.value)
+          },
+          handleInput(e) {
+            this.$refs.input.value = this.value
+            if (this.value.length >= this.number) {
+              this.hideKeyboard()
+            }else{
+                 this.ishideboad=false;
+            }
+            this.handleSubmit()
+          },
+          comment:function(e){
+              console.log('提交数据')
+          },
+          handleFocus:function(res){
+            console.log('jujiao');
+         
+          },
+          handleBlur:function(res){
+            console.log('视角');
+          }
+
+    }
+})
+</script>
+
+</body>
+</html>

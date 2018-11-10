@@ -1,0 +1,43 @@
+body{background-color: #FFF;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.logoBox{
+  padding: 2rem 0rem;
+}
+.logo{
+  box-shadow: 0rem 0rem 0.1rem #666;
+  width: 2rem;height: 2rem;border-radius: 50%;
+  font-size: 0.3rem;margin: 0 auto;text-align: center;line-height: 2rem;
+}
+.loginInfo{margin-bottom: 0.3rem;}
+.loginInfo .ui-col{
+  font-size: 0.28rem;height: 0.64rem;line-height: 0.64rem;
+}
+.col-title{text-align: right;}
+.loginInfo .ui-input{height: 0.64rem;}
+.tipsBox{font-size: 0.3rem;}
+.col-tips{height: 0.64rem;text-align: right;}
+.col-tips .ui-border-radius:before{border: 0;}
+.col-tiptxt .ui-border-radius:before{border: 0;}
+.col-circle .ui-border-radius:before{border: 0;}
+.col-tiptxt{font-size: 0.14rem;text-align: center;color: #999;}
+.ui-whitespace .alipay .otherIcon{
+    margin: 0rem auto;
+}
+.ui-whitespace .user .otherIcon{
+    float: right;
+}
+.otherIcon{
+    width: 0.64rem;height: 0.64rem;padding: 0;color: #999;
+    border-radius: 50%;font-size: 0.64rem;line-height: 0.64rem;
+}
+.cur .otherIcon{
+    color: #00CF05;
+}
+.icon-shenfenzheng{
+    font-size: .65rem;
+    }

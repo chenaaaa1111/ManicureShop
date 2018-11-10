@@ -1,0 +1,99 @@
+body{background-color: #F4F4F4;}
+html,body{width: 100%;height: 100%;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.head{
+    width: 100%;height: 0.98rem;padding-top: 0.49rem;line-height: 0.98rem;text-align: center;
+    color: #FFF;position: relative;background: #FF4C8E;
+}
+.headTitle{
+    margin: 0rem 0.98rem;height: 100%;font-size: 0.3rem;
+}
+.back{
+    width: 0.98rem;height: 100%;font-size: 0.3rem;left: 0;top: 0.49rem;
+    position: absolute;text-align: left;text-indent: 0.24rem;font-size: 0.4rem;
+}
+.wrapper{
+    position: absolute;width: 100%;top: 1.47rem;bottom: 0.88rem;height: auto;overflow: auto;
+}
+.shoppingBox{
+    margin-top: 0.2rem;border-top: 1px solid #E4E4E4;border-bottom: 1px solid #E4E4E4;
+}
+.list{
+    height: 2rem;background: #FFF;padding: 0.3rem 0rem;position: relative;border-top: 1px solid #E4E4E4;
+}
+.shoppingBox .list:first-child{
+    border-top: 0;
+}
+.left{
+    width: 2.72rem;height: 2rem;position: absolute;top: 0.3rem;left: 0;
+}
+.right{
+    height: 100%;margin-left: 2.72rem;margin-right: 0.24rem;
+}
+.left img{
+    display: block;margin-left: 0.48rem;width: 2rem;height: 2rem;
+}
+.shoppingName{
+    height: 0.3rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+    font-size: 0.3rem;line-height: 0.3rem;color: #333;padding-top: 0.23rem;
+}
+.format{
+    height: 0.26rem;line-height: 0.26rem;height: 0.26rem;color: #999;margin-top: 0.39rem;
+    font-size: 0.26rem;
+}
+.price{
+    font-size: 0.3rem;height: 0.3rem;line-height: 0.3rem;color: #FE366A;
+    margin-top: 0.54rem;
+}
+.count{
+    background: #FFF;margin: 0.2rem 0rem;
+}
+.count .countList{
+    height: 0.98rem;line-height: 0.98rem;font-size: 0.32rem;color: #333;
+}
+.countList:after{
+    display: block;content: "";height: 0;clear: both;
+}
+.countTitle{
+    float: left;margin-left: 0.24rem;
+}
+.countNum{
+    float: right;margin-right: 0.24rem;color: #666;
+}
+.countPrice{
+    color: #FE366A;
+}
+.footer{
+    height: 0.88rem;width: 100%;position: fixed;bottom: 0;
+}
+.inner{
+    width: 100%;height: 100%;position: relative;background: #FFF;
+}
+.submit{
+    width: 3rem;height: 100%;color: #FFF;background: #FF4993;
+    font-size: 0.3rem;line-height: 0.88rem;text-align: center;
+    position: absolute;top: 0;right: 0;
+}
+.money{
+    margin-right: 0.3rem;margin-left: 0.24rem;line-height: 0.88rem;font-size: 0.3rem;
+}
+.money span{
+    font-weight: 700;color: #ff4f89;font-size: 0.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

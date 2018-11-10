@@ -1,0 +1,34 @@
+body{background-color: #F4F4F4;}
+html,body{width: 100%;height: 100%;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.title{
+    height: 0.48rem;font-size: 0.48rem;line-height: 0.3rem;padding: 2.05rem 0.24rem 0.54rem;
+}
+.tips{
+    height: 0.3rem;font-size: 0.3rem;line-height: 0.3rem;color: #999;margin: 0rem 0.24rem 0.76rem;
+}
+.name{
+    color: #333;font-size: 0.26rem;height: 0.26rem;line-height: 0.26rem;padding: 0rem 0.24rem 0.19rem;
+}
+.write{
+    height: 0.64rem;margin: 0rem 0.24rem;position: relative;
+}
+.inputBox{
+    height: 100%;margin-right: 0.9rem;border-bottom: 1px solid #A5A5A5;
+}
+.inputBox input{
+    display: block;width: 100%;height: 100%;border: 0;background: none;
+    font-size: 0.45rem;color: #333;
+}
+.next{
+    width: 0.64rem;height: 0.64rem;border-radius: 50%;position: absolute;top: 0;right: 0;
+    color: #999;font-size: 0.64rem;line-height: 0.64rem;
+}
+.cur{
+    color: #ff4f89;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>我的-设置</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/mySetup.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+
+    <script type="text/javascript" src="js/rem.js" ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <div class="head">
+          <div class="title">设置</div>
+          <div class="left">
+            <a href="javascript:"></a>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-back-m"></use>
+            </svg>
+          </div>
+          <div class="right">
+            <a href="mySetupEdit.html">
+              <span>编辑</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="listBox">
+        <div class="list">
+          <div class="listInfo">头像</div>
+          <div class="listButton">
+            <div class="userPic">
+              <img src="images/index/head_02.png" />
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="listInfo">昵称</div>
+          <div class="listButton">
+            小陌陌.Siqin Gaowa
+
+          </div>
+        </div>
+        <div class="list">
+          <div class="listInfo">手机号</div>
+          <div class="listButton normal">
+            未设置
+          </div>
+        </div>
+      </div>
+      <div class="listBox">
+        <div class="list">
+          <div class="listInfo">性别</div>
+          <div class="listButton">
+            女
+          </div>
+        </div>
+        <div class="list">
+          <div class="listInfo">生日</div>
+          <div class="listButton normal">
+            未设置
+          </div>
+        </div>
+      </div>
+      <div class="listBox">
+        <div class="list">
+          <div class="listInfo">账户安全</div>
+          <div class="listButton">
+            <div class="right">
+              <img src="images/my/right.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottomBar">
+      <div class="ui-row-flex ui-whitespace">
+        <div class="ui-col ui-col">
+          <div class="barIcon">
+            <img src="images/index/home.png"/>
+          </div>
+          <a href="indexPage.html">
+            <div class="barName">
+              首页
+            </div>
+          </a>
+        </div>
+        <div class="ui-col ui-col">
+          <div class="barIcon">
+            <img src="images/index/house.png"/>
+          </div>
+          <div class="barName">
+            商城
+          </div>
+        </div>
+        <div class="ui-col ui-col">
+          <div class="barIcon">
+            <img src="images/index/plane.png"/>
+          </div>
+          <div class="barName">
+            分享专区
+          </div>
+        </div>
+        <div class="ui-col ui-col col_cur">
+          <div class="barIcon">
+            <img src="images/index/my_fill.png"/>
+          </div>
+          <div class="barName">
+            我的
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        $(function(){
+          $(".left").click(function(){
+            history.back(-1)
+          })
+        })
+    </script>
+  </body>
+</html>

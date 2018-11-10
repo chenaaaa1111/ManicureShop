@@ -1,0 +1,92 @@
+body{background-color: #FCFCFC;}
+html,body{width: 100%;height: 100%;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.head{
+    width: 100%;height: 0.98rem;padding-top: 0.49rem;line-height: 0.98rem;text-align: center;
+    color: #FFF;position: relative;background: #FF4C8E;margin-bottom: 0.2rem;
+}
+.headTitle{
+    margin: 0rem 0.98rem;height: 100%;font-size: 0.3rem;
+}
+.back{
+    width: 0.98rem;height: 100%;font-size: 0.3rem;left: 0;top: 0.49rem;
+    position: absolute;text-align: left;text-indent: 0.24rem;font-size: 0.4rem;
+}
+.replyList{
+    padding: 0.25rem 0rem 0.1rem;background: #fff;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+    position: relative;min-height: 1.65rem;
+    margin-bottom: 0.2rem;
+}
+.replyList:after{
+    display: block;height: 0;content: '';clear: both;
+}
+.product{
+    width: 2.04rem;height: 1.5rem;position: absolute;
+    top: 0.25rem;left: 0;
+}
+.content{
+    min-height: 1.5rem;margin-left: 2.04rem;margin-right: 0.24rem;
+}
+.product img{
+    display: block;width: 1.5rem;height: 1.5rem;margin: 0rem 0.3rem 0rem 0.24rem;
+}
+.contop{
+    height: 0.44rem;position: relative;
+}
+.userImg{
+    width: 0.44rem;height: 0.44rem;border-radius: 50%;overflow: hidden;
+    float: left;
+}
+.userImg img{
+    display: block;width: 100%;height: 100%;
+}
+.userName{
+    height: 100%;font-size: 0.3rem;
+    float: left;line-height: 0.44rem;margin-left: 0.1rem;
+}
+.tips{
+    font-size: 0.24rem;height: 0.24rem;line-height: 0.24rem;
+    color: #999;margin-left: 0.2rem;margin-top: 0.13rem;float: left;
+}
+.replyTime{
+    font-size: 0.24rem;height: 0.24rem;line-height: 0.24rem;
+    color: #999;margin-top: 0.13rem;float: right;
+}
+.contxt{
+    font-size: 0.24rem;line-height: 0.36rem;color: #666;
+}
+
+.dialogueBox{
+    height: 0.42rem;
+}
+.dialogue{
+    display: inline-block;width: 1.06rem;height: 0.4rem;
+    line-height: 0.4rem;text-align: center;border-radius: 0.14rem;
+    font-size: 0.3rem;border: 0.01rem solid #999;color: #999;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
