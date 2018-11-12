@@ -246,9 +246,20 @@
                 </div>
               </div>
                 <button id="save" class="save" @click="saveplain" >保存方案</button>
+
                 <button id="reset" class="reset" @click="reset" >重置</button>
-      
+                  <div id="modal1" v-show="modol1">
+                    <div class="modoldiv">
+                      <p class="mtitle">保存为</p> 
+                        <input class="minput" type="" placeholder="请输入方案名称" name="">
+
+                        <div class="buttongroup">
+                          <button class="sure" @click="ok">确定</button><button class=" cance" @click="cancel">取消</button>
+                        </div> 
+                    </div>
+                  </div>
       </div>
+    
   </div>
     <script type="text/javascript">
       var vm=new Vue({
@@ -256,12 +267,20 @@
         data:function(){
           return ({
                   imageUrl:false,
-                  chooseIds:{}
+                  "modol1":false,
+                  chooseIds:{},
+                  modal1:false,
                 })
         },
         methods:{
+            ok:function(event){
+                this.modol1=false;
+            },
+            cancel:function(event){
+                this.modol1=false;
+            },
             saveplain:function (event) {
-
+                this.modol1 = true
             },
             reset:function(event){
                 localStorage.setItem('chooseIds','');

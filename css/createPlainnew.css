@@ -642,4 +642,50 @@ html,body{width: 100%;height: 100%;}
     border-radius: .1rem;
     margin-left: .3rem;
 }
+#modal1{
+  position: fixed;width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+.modoldiv{
+  width: 4.76rem;
+  height: 3.48rem;
+  background: #fff;
+  font-size: .3rem;
+  display: flex;
+
+/*  justify-content: center;
+*/  flex-direction: column;
+  align-items: center;
+
+}
+.mtitle{
+  margin-top: .5rem;
+  margin-bottom: .7rem;
+  font-weight: 900;
+}
+.minput{
+  margin-bottom: .3rem;
+  font-size: .26rem;
+}
+.sure{
+  background: #ff5185;
+  width: 1.35rem;height: .48rem;
+  color: #fff;margin-right: .2rem;
+  font-size: .26rem;
+}
+.cance{
+  background: #b637ff;
+  color: #fff;
+  width: 1.35rem;height: .48rem;
+  border-radius: .04rem;
+    font-size: .26rem;
+
+
+}

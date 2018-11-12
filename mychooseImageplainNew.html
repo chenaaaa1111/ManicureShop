@@ -97,7 +97,9 @@
       var vm=new Vue({
       	el:"#app",
       	data:function(){
+
       		return {
+            choose:'',
             imageList:[{
               url:"./images/index/Pic_01.png",
               id:1
@@ -169,11 +171,13 @@
       	methods:{
       		
       		deleteimg:function(){
+            location.href="createPlainnew.html?imgUrl="+this.choose;
       		
       		},
       		chooseImg:function(item,event){
             var url=event.currentTarget.getAttribute("data-url")
-      		    location.href="createPlainnew.html?imgUrl="+url;
+            this.choose=url;
+      		    
       		}
 
       	},
