@@ -1,0 +1,124 @@
+body{background-color: #F4F4F4;}
+html,body{width: 100%;height: 100%;}
+.wrapper{
+  position: absolute;width: 100%;top: 0;bottom: 0.95rem;height: auto;
+  overflow: auto;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.top{
+  height: 0.98rem;padding-top: 0.49rem;background-color: #FF4F89;
+}
+.head{
+    height: 0.98rem;position: relative;
+}
+.title{
+    margin: 0rem 0.98rem;height: 100%;line-height: 0.98rem;font-size: 0.32rem;color: #FFF;text-align: center;
+}
+.head .left{
+    width: 0.98rem;height: 100%;position: absolute;top: 0;left: 0;
+    font-size: 0.32rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.26rem;
+}
+.head .right{
+    width: 0.98rem;height: 100%;position: absolute;top: 0;right: 0;
+    font-size: 0.24rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.24rem;
+}
+.listBox{
+    border-top: 1px solid #E4E4E4;border-bottom: 1px solid #E4E4E4;margin-bottom: 0.19rem;background: #FFF;
+}
+.listBox .list{
+    height: 0.98rem;font-size: 0.32rem;color: #333;position: relative;border-top: 1px solid #E4E4E4;
+}
+.listBox .list:first-child{border-top: 0;}
+.list .listInfo{
+    margin-left: 0.24rem;width: 2.5rem;height: 100%;line-height: 0.98rem;
+}
+
+.listButton{
+    height: 100%;position: absolute;top: 0;right: 0.48rem;font-size: 0.32rem;color: #333;line-height: 0.98rem;
+}
+.userPic{
+    width: 0.64rem;height: 0.64rem;border-radius: 50%;margin-top: 0.17rem;
+    float: right;overflow: hidden;
+}
+.userPic img{width: 100%;height: 100%;}
+.normal{color: #FE366A;}
+.listButton .right{
+    width: 0.17rem;height: 0.32rem;margin-top: 0.33rem;
+}
+.listButton .right img{
+    width: 100%;height: 100%;display: block;
+}
+/*.listButton img{*/
+    /*width: 0.17rem;height: 0.32rem;display: block;margin: 0.33rem 0.45rem 0rem 0.36rem;*/
+/*}*/
+
+.bottomBar{
+  position: fixed;z-index: 999;left: 0;bottom: 0;
+  width: 100%;height: 0.95rem;font-size: 0.2rem;
+  background: #FFF;
+}
+.barIcon{
+  height: 0.56rem;
+}
+.barIcon img{
+  width: 0.34rem;height: 0.34rem;display: block;margin: 0rem auto;
+  position: relative;top: 0.13rem;
+}
+.barName{
+  height: 0.39rem;line-height: 0.39rem;text-align: center;
+}
+.col_cur .barName{color: #FA004B;}
+
+  input::-webkit-input-placeholder{
+            color:red;text-align: right;
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color:red;
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color:red;
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+            color:red;
+        }
+
+.bn{}
+.noInput{
+    border: none;
+    text-align: right;
+}
+.right a{
+    color: #fff;
+}
+.iconImage{
+  height: 3.3rem;
+  background:#eee; 
+  text-align: center;
+}
+.imgDiv {
+  padding-top: .8rem;
+      padding-top: .8rem;
+    height: 1.4rem;
+}
+.imgDiv img{
+  height: 1.4rem;
+}
+.iconImage p{
+  font-size: .3rem;
+  padding-top: .24rem;
+}
+.bottom{
+  position: fixed;
+  bottom: 1rem;
+  font-size: .22rem;
+  color: #999;
+  text-align: center;
+  width: 100%;
+}

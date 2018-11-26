@@ -22,7 +22,7 @@ function showDialog(options) {
 			    </div>\
 			</div>'
     $('body').append(html);
-    $('body').on('click', '.makesure', function () {
+    $('body').on('click', '.cancen', function () {
         $('.ui-dialog').removeClass('show')
         options.makeSure()
 

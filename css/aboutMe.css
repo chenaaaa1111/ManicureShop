@@ -11,22 +11,32 @@ html,body{width: 100%;height: 100%;}
     overflow: hidden;
 }
 .top{
-  height: 4.5rem;position: relative;
+  height: 5.4rem;position: relative;
+      background: #fff;
+    margin-bottom: .2rem;
 }
 .top img{
   display: block;width: 100%;height: 100%;
 }
 .top .userBox{
   width: 1.14rem;height: 1.14rem;position: absolute;
-  border-radius: 50%;top: 1.94rem;left: 50%;margin-left: -0.57rem;
+  border-radius: 50%;top: 1.94rem;left: 13%;margin-left: -0.57rem;
 }
 .userBox img{display: block;width: 100%;height: 100%;}
 .top .userName{
     height: 0.36rem;width: 100%;text-align: center;color: #FFF;font-weight: 600;
-    position: absolute;top: 3.4rem;font-size: 0.36rem;line-height: 0.36rem;
+    position: absolute;top: 2rem;
+    font-size: 0.36rem;line-height: 0.36rem;
+    color: #333;
+
 }
 .top .topBar{
-    height: 0.6rem;width: 100%;position: absolute;left: 0; top: 0.7rem;
+    height: 1rem;width: 100%;
+    position: absolute;left: 0; 
+    top: 0.5rem;
+    display: flex;
+    z-index: 999;
+
 }
 .topBar .setup{
     width: 0.44rem;height: 100%;float: left;margin-left: 0.24rem;
@@ -51,6 +61,7 @@ html,body{width: 100%;height: 100%;}
 }
 .listBox .list{
     height: 0.98rem;font-size: 0.32rem;color: #333;position: relative;border-top: 1px solid #E4E4E4;
+        border-bottom: 1px solid #E4E4E4;
 }
 .listBox .list:first-child{border-top: 0;}
 .list .listInfo{
@@ -87,23 +98,218 @@ html,body{width: 100%;height: 100%;}
     color: #333;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.score{
+  padding-left: 1.8rem;text-align: left;padding-bottom: .2rem;
+}
 
 .bn{}
+.topFlex{
+  display: flex;
+  position: relative;
+  height: 100%;
+  padding-top: 2rem;
+}
+.cards{
+  display: flex;
+  font-size: .28rem;
+   margin-top: 1.2rem;
+   width: 100%;
+}
+.cleft{
+  width: 50%;
+  text-align: center;
+}
+.cleft,.cright{
+  padding-top: .28rem;
+}
+.cleft div{
+  
+  text-align: center;
+}
+.cleft img {
+    width: .68rem;
+    height: .64rem;
+    display: inline;
+}
+.cright div{
+  
+  text-align: center;
+}
+.cright img {
+   width: 1.68rem;
+   height: .64rem;
+    display: inline;
+}
+.cright{
+  width: 50%;
+  text-align: center;
+}
+.text{
+  padding-top: .14rem;
+  color: #666;
+}
+.cright .text{
+    text-align: left;
+    padding-left: .5rem;
+}
+.sname{
+  font-size: .32rem;
+  font-weight: 900;
+  color: #333;
+}
+.middleText{
+      width: 5.5rem;
+    font-size: .36rem;
+    text-align: center;
+}
+.score{
+  font-size: .28rem;
+  color: #333;  
+}
+.modol{
+     position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.imgdiv{
+  text-align: center;
+}
+.imgdiv img{
+  height: 3.25rem;
+}
+.imgdiv p{
+  font-size: .3rem;
+  color: #333;
+}
+.modolContent{
+         position: relative;
+    padding-top: .4rem;
+    width: 5rem;
+    height: auto;
+    padding-bottom: .7rem;
+    background: #fff;
+    padding-left: .1rem;
+    padding-right: .1rem;
+    border-radius: .1rem;
+}
+.buttons{
+  text-align: center;
+  padding-top: .4rem;
+}
+.makesure{
+  margin-right: .2rem;
+  background: #ff5185;
+  color:#fff;
+}
+.content{
+  font-size: .24rem;
+  color: #999;
+  padding-left: .4rem;
+  padding-right: .4rem;
+}
+.buttons{
+      height: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    align-items: center;
+    box-sizing: border-box;
+}
+.textcenter input{
+  text-align: center;
+}
+.buttons button{
+  width: 1.5rem;
+  height: .5rem;
+  font-size: .24rem;
+}
+.modoscore{
+  padding-bottom: .48rem;
+  height: auto;
+}
+.cance{
+  background: #ccc;
+}
+.hide{
+  display: none;
+}
+.modolTitle{
+    font-weight: 900;
+    padding-bottom: .1rem;
+}
+.messagedec{
+    color:#ff4f89;
+    font-size: .22rem;
+     text-align: center;
+}
+.redlinebg{
+  background: -webkit-linear-gradient(#ff4598, #ff5185); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#ff4598, #ff5185); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#ff4598, #ff5185); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#ff4598, #ff5185); /* 标准的语法 */
+}
+.blueLine{
+    color: #fff;
+    background: -webkit-linear-gradient(#ca6eff, #b637ff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ca6eff, #b637ff); 
+    background: -moz-linear-gradient(#ca6eff, #b637ff); 
+    background: linear-gradient(#ca6eff, #b637ff);   }
+.textcenter{
+  text-align: center;
+}
+.pnum{
+  padding-top: .48rem;
+  text-align: center;
+}
+.closeX{
+  color: #ccc;
+  font-size: .4rem;
+}
+.textcenter input{
+  border:none;
+  border-bottom: 1px solid #eee;
+  width: 4rem;
+  padding: .2rem;
+}
+#score{
+  color: #fff;
+  width: 1.57rem;
+}
+#scoreLost{
+      color: #ff4646;
+    font-size: .2rem;
+    position: absolute;
+    right: .65rem;
+    bottom: .3rem;
+}
+.disabled{
+  background: #ccc;
+}
+#scorese{
+  color: #fff;
+}
+#cancebuy{
+  color: #fff;
+}
+.closeX{
+    position:absolute;
+    top: .1rem;
+    right: .2rem;
+    font-size: .4rem;
+}
+.messagedec{
+  padding-top: .14rem;
+  padding-bottom: .39rem;
+}
+#clsespan{
+  font-size: .4rem;
+}
+
+ 

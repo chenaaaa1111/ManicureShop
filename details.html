@@ -143,10 +143,7 @@
             </div>
           </div>
           <div class="floor">
-            <!-- 原来的删除 -->
-         <!--    <scroller ref="myscroller" class="myscroll"  height="400"
-            :on-infinite="infinite"> -->
-               <div class="landlord" v-for="item in commentsList" :id="item.id"  @click.capture='commetDetail'>
+               <div class="landlord" @touchstart="touchstarthandle(item.id,1)" @touchend="touchendhandle(item.id,1)" v-for="item in commentsList" :id="item.id"  @click.capture='commetDetail'>
               <div class="lordInfo">
                 <div class="landName">
                   <div class="nameTxt">
@@ -180,7 +177,7 @@
          <scroller ref="myscrollerCommen"  
             :on-infinite="infiniteCommen"> 
           <div class="floor basBottom">
-                <div class="landlord"   @click='commetDetail'>
+                <div class="landlord"   @click='commetDetail' @touchstart="touchstarthandle(item.id,2)" @touchend="touchendhandle(item.id,2)">
               <div class="lordInfo">
                 <div class="landName">
                   <div class="nameTxt">
@@ -235,9 +232,9 @@
                  <div class=" diainputBox" id="diaInput"   v-if="showInput">
                        <div class="boxInner">
                             <div  class="inputWrap">
-                              <input type="text" id="diavalue"/>
+                              <input type="text" :modol="commentval" id="diavalue"/>
                             </div>
-                            <div class="diasend" @click="commitComment">
+                            <div class="diasend"  @click="commitComment">
                               发表
                             </div>
                         </div>
@@ -246,9 +243,22 @@
                   </div>
                </div>
           </div>
-        
+          <div :class=" showDelete? 'ui-dialog show':'ui-dialog'" >
+            <div class="ui-dialog-cnt" >
+                <div class="ui-dialog-bd">
+                    <h3> 警告</h3>
+                    <p>确定要删除本条内容嘛？</p>
+                </div>
+                  <div class="ui-dialog-ft">
+                      <button type="button" data-role="button" @click="deletehandle">确定</button>
+                      <button type="button" data-role="button" class="btn-recommand" @click="cancer">取消</button>
+                  </div>
+              </div>
+          </div>
      </div>
+
     </div>
+
     <div class="footerBar">
       <div class="addCard">
         加入购物车
@@ -286,16 +296,26 @@
 
         });
         $(".send").click(function () {//增加输入框为空验证
+          if($(".inputBox input").val()==''||$(".inputBox input").val()=='underfind'||!$(".inputBox input").val()){
+            return;
+
+          }
           if($(".inputBox input").val('')){
             $(this).parents(".inputBox").hide();
             $(this).parents(".inputBox").prev().show();
           } 
          
         });
-        $(".inputBox input").blur(function () {
-            $(this).parents(".inputBox").hide();
-            $(this).parents(".inputBox").prev().show();
-        });
+        // $(".inputBox input").blur(function () {
+        //     $(this).parents(".inputBox").hide();
+        //     $(this).parents(".inputBox").prev().show();
+        // });
+        $('body').click(function(event){
+          if(!$(event.target).hasClass('send')&&!$(event.target).hasClass('comment')&&!$(event.target).is('input')){
+            $(".inputBox input").parents(".inputBox").hide();
+             $(".inputBox input").parents(".inputBox").prev().show();
+          }
+        })
     })
   </script>
   <script type="text/javascript">
@@ -303,7 +323,13 @@
         el:"#app",
         data:function(){
           return {
+            commentval:'',
             height:'4rem',
+            deleteType:'',
+            deleteId:'',
+            touchTime:'',
+            touchend:false,
+            showDelete:false,//显示弹框
             message:"",
             allMessage:" ",
             "commentsList":[{"id":146,"goodsId":0,"content":"大萨达","fromUserName":"刘邦","commentTime":"2018-10-19 10:53:55.0","userImg":"http://www.jequirity.cn:9096/hlcdn/userIcon/head_01.png","replyNum":null}],
@@ -314,6 +340,35 @@
             isfromCommen:false
         }},
         methods:{
+          deletehandle:function(){
+            let id=this.deleteId;
+            let type=this.deleteType;//删除类型 1评论 2 回复；
+            console.log(id,type);
+            this.showDelete=false;
+
+          },
+          cancer:function(){
+               this.showDelete=false;
+          },
+          touchstarthandle:function(id,type){
+            this.deleteType=type;
+            this.touchend=false;
+            this.deleteId=id;
+            console.log('touchstarthandle');
+            var _this=this;
+            this.touchTime=new Date();
+            setTimeout(function(){
+                if(!_this.touchend){
+                    _this.showDelete=true;
+                     vm.showmodal=false;
+                }
+            },1000)
+          },
+          touchendhandle:function(id,type){
+            console.log('touchendhandle');
+            var endTime=new Date();
+            this.touchend=true;
+          },
           loadAllComments:function(e){//新加 2018-11-07
             this.isfromCommen=false;
              // vm.$refs.myscrollerCommen.finishInfinite(true);//锁定数据
@@ -326,6 +381,7 @@
               vm.showInput=true;
           },
             commitComment:function(e){
+              console.log(123)
                 vm.showInput=true;
             },
             changeShowAll:function(e){
@@ -349,8 +405,7 @@
               }
             },
             infinite:function(done){//加载评论数据
-                           done(true)
-
+                done(true);
                if(this.isfromCommen){
                 done(false);
               return;
@@ -389,7 +444,11 @@
             }
             },
             commitComment:function(e){
+              console.log(456);
               var comment=$('#diavalue').val();
+              if(!comment||comment=='underfind'){
+                  return;
+              }
               vm.showInput=false;
               $.ajax({
                   url:'',

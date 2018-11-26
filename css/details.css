@@ -68,7 +68,7 @@ html,body{width: 100%;height: 100%;}
   display: block;width: 100%;height: 100%;
 }
 .detailsTitle{margin-right: 0.2rem;}
-.commentBox{background: #FFF;padding: 0.3rem 0rem 0.39rem;margin-bottom: 0.22rem;position: relative}
+.commentBox{background: #FFF;padding: 0.3rem 0rem 0.6rem;margin-bottom: 0.22rem;position: relative}
 .comment{
   margin: 0rem 0.24rem;font-size: 0.24rem;color: #999;
   border-radius: 0.16rem;border: 1px solid #e9e9e9;height: 0.56rem;
@@ -76,7 +76,7 @@ html,body{width: 100%;height: 100%;}
 }
 .inputBox{
   border-radius: 0.16rem;border: 1px solid #e9e9e9;height: 0.56rem;overflow: hidden;
-  position: absolute;top: 0.3rem;left: 0.24rem;right: 0.24rem;width: auto;
+  position: absolute; top: 0.15rem;left: 0.24rem;right: 0.24rem;width: auto;
   display: none;
 }
 .boxInner{
@@ -261,4 +261,10 @@ html,body{width: 100%;height: 100%;}
       font-size: .32rem;
     text-align: center;
     margin-top: .2rem;
+}
+#diavalue{
+  padding-left: .2rem;
+    padding-top: .1rem;
+    border: none;
+    width: 5.5rem;
 }

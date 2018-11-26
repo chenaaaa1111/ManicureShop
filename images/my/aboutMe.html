@@ -36,7 +36,7 @@
               <img src="images/index/head_01.png" />
             </div>
             <div class="userName">
-              <div class="score sname">小沫沫DJ-ANIMATION</div>
+              <div class="score">小沫沫DJ-ANIMATION</div>
               <div class="score">积分：24</div>
             </div>
             <div class="cards">
@@ -68,7 +68,7 @@
           <div class="list">
             <div class="listInfo">我的订单</div>
             <div class="listIcon">
-              <img src="images/my/ordernew.png" />
+              <img src="images/my/order.png" />
             </div>
             <div class="listButton">
               <img src="images/my/right.png" />
@@ -79,7 +79,7 @@
           <div class="list">
             <div class="listInfo">账户余额</div>
             <div class="listIcon">
-              <img src="images/my/poornew.png" />
+              <img src="images/my/poor.png" />
             </div>
             <div class="listButton">
               <img src="images/my/right.png" />
@@ -90,7 +90,7 @@
           <div class="list">
             <div class="listInfo">我的美甲方案</div>
             <div class="listIcon">
-              <img src="images/my/plain.png" />
+              <img src="images/my/poor.png" />
             </div>
             <div class="listButton">
               <img src="images/my/right.png" />
@@ -101,7 +101,7 @@
           <div class="list">
             <div class="listInfo">我的收藏</div>
             <div class="listIcon">
-              <img src="images/my/collectnew.png" />
+              <img src="images/my/collect.png" />
             </div>
             <div class="listButton">
               <img src="images/my/right.png" />
@@ -112,7 +112,7 @@
           <div class="list">
             <div class="listInfo">我的审核</div>
             <div class="listIcon">
-              <img src="images/my/mychecknew.png" />
+              <img src="images/my/collect.png" />
             </div>
             <div class="listButton">
               <img src="images/my/right.png" />
@@ -125,7 +125,7 @@
           <div class="list">
             <div class="listInfo">联系客服</div>
             <div class="listIcon">
-              <img src="images/my/relash.png" />
+              <img src="images/my/chatterbox.png" />
             </div>
             <div class="listButton">
               <img src="images/my/right.png" />
@@ -136,7 +136,7 @@
           <div class="list">
             <div class="listInfo">商务合作</div>
             <div class="listIcon">
-              <img src="images/my/componney.png" />
+              <img src="images/my/daojianghu.png" />
             </div>
             <div class="listButton">
               <img src="images/my/right.png" />
@@ -148,7 +148,7 @@
         <div class="list">
           <div class="listInfo">我的专区</div>
           <div class="listIcon">
-            <img src="images/my/mysenew.png" />
+            <img src="images/my/my.png" />
           </div>
           <div class="listButton">
             <img src="images/my/right.png" />
@@ -200,91 +200,6 @@
         </div>
       </div>
     </div>
-    <div class="modol hide"> 
-        <div class="modolContent shhf " >
-          <span class="closeX" id="clsespan"  onclick="togglemodol();" >X</span>
-          <div class="imgdiv">
-            <p class="modolTitle">购买打印服务</p>
-            <img src="./images/my/copyBig.png">
-          </div>
-          <p class="content">
-            您每次做美甲，我们将向您收取一小部分打印费，也可以用积分换取打印次数。（一百积分兑换一次）
-          </p>
-          <div class="buttons">
-             <button class="makesure redlinebg " id="buy">立即购买</button>
-              <button class="cance blueLine disabled" id="score" >积分兑换</button>
-              
-          </div>
-           <span id="scoreLost">积分剩余<span id="scoreLostnum">505</span></span>
-        </div>
-        <div class="modolContent modoscore hide " >
-           <span class="closeX" onclick="togglemodol();" >X</span>
-          <div class="imgdiv">
-            <p class="modolTitle" >积分兑换</p>
-           
-          </div>
-          <p class="messagedec">（积分剩余：505，100积分＝1次打印服务）</p>
-          <p class="content textcenter">
-             <input type="" name="" value="1" style="text-align: center;">
-          </p>
-          <div class="buttons">
-             <button class="makesure" id="buyse">确认兑换</button>
-              <button class="cance" id="scorese">剩余<span id="score">405</span>积分</button>
-          </div>
-        </div>
-         <div class="modolContent modobuy hide " >
-           <span class="closeX" onclick="togglemodol();" 
-           >X</span>
-          <div class="imgdiv">
-            <p class="modolTitle">购买次数</p>
-          </div>      
-          <p class="content pnum textcenter" style="text-align: center;padding-top:.48rem">
-             <input type="" name="" value="10">
-          </p>
-          <div class="buttons">
-             <button class="makesure redlinebg" id="buysecomm">提交</button>
-              <button class="cance blueLine" id="cancebuy">返回</button>
-          </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-    	  function toggleDiv (selector){
-          		$(selector).toggleClass('hide');
-          }
-            function togglemodol(selector){
-            $(".modol").toggleClass('hide');
-            intmodol();
-          }
-          function intmodol(){
-            $(".shhf").removeClass('hide');
-            $(".modoscore,.modobuy").addClass('hide');
-          }
-      $(function(){      
-          $("#buyse").click(function(){
-          	            togglemodol();
-          })
-          $("#scorese").click(function(){
-          	togglemodol();
-          })
-          $("#buy").click(function(){
-            toggleDiv('.shhf,.modobuy');
-          })
-            $("#score").click(function(){
-              if($(this).hasClass('disabled')){
-                return;
-              }
-            toggleDiv('.modoscore,.shhf');
-          })
-            $(".cright").click(function(){
-               togglemodol();
-            })
-            $("#buysecomm").click(function(){
-            	togglemodol();
-            })
-            $('#cancebuy').click(function(){
-            	togglemodol();
-            })
-      })
-    </script>  
+
   </body>
 </html>

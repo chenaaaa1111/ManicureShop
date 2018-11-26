@@ -537,6 +537,7 @@ html,body{width: 100%;height: 100%;}
     border-radius: .05rem;
     justify-content: space-between;
     padding-right: .48rem;
+    position: relative;
 }
 .edit{
     width: .3rem;
@@ -582,6 +583,15 @@ html,body{width: 100%;height: 100%;}
 .printDiv{
     text-align: center;
   padding-bottom: .2rem;
+}
+.deleteImg{
+    margin-top: -.37rem;
+    margin-left: rem;
+    position: absolute;
+    right: .2rem;
+    top: 0.4rem;
+    font-size: .32rem;
+    color: #999;
 }
 .card{
     background: #fff;

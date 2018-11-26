@@ -16,6 +16,7 @@
     <script type="text/javascript" src="js/rem.js" ></script>
     <script src="https://vuejs.org/js/vue.min.js"></script>
      <script type="text/javascript" src="lib/vue-scroller.js"></script>
+     <script type="text/javascript" src="js/lib.js"></script>
   <!-- import stylesheet -->
   <!-- import iView -->
    
@@ -23,7 +24,7 @@
 
 </head>
 <body>
-  <div id="app">
+  <div id="app" v-clock v-show="showapp">
     <div class="wrapper">
       <div class="top">
        <div class="head">
@@ -38,7 +39,6 @@
                </div>
           </div>
       </div>
-
               <div class="tabs change_list">
                 <div class="love active_content">
                   <div class="card">                 
@@ -246,18 +246,19 @@
                 </div>
               </div>
                 <button id="save" class="save" @click="saveplain" >保存方案</button>
-
                 <button id="reset" class="reset" @click="reset" >重置</button>
-                  <div id="modal1" v-show="modol1">
-                    <div class="modoldiv">
+                  <div id="modal1" v-if="modol1">
+                    <div class="modoldiv" v-if="true">
+                      <span @click="closeModol" class="closeModol">X</span>
                       <p class="mtitle">保存为</p> 
-                        <input class="minput" type="" placeholder="请输入方案名称" name="">
+                        <input class="minput" type="" placeholder="请输入方案名称" :value="chooseName" :modol="chooseName" name="">
 
-                        <div class="buttongroup">
-                          <button class="sure" @click="ok">确定</button><button class=" cance" @click="cancel">取消</button>
+                        <div class="buttongroup" >
+                          <button class="sure" @click="ok">保存</button><button class=" cance" @click="cancel">返回</button>
                         </div> 
                     </div>
                   </div>
+                  <dialog></dialog>
       </div>
     
   </div>
@@ -267,12 +268,18 @@
         data:function(){
           return ({
                   imageUrl:false,
+                  showapp:false,
                   "modol1":false,
                   chooseIds:{},
                   modal1:false,
+                  chooseName:'',
+                  chooseId:""
                 })
         },
         methods:{
+          closeModol:function(event){
+              this.modol1=false;
+          },
             ok:function(event){
                 this.modol1=false;
             },
@@ -323,13 +330,38 @@
           }
 
         },
-        mounted:function(){
+        mounted:function(){   
+          this.showapp=true;
             var imgUrl=this.getUrlParame('imgUrl');
+            var self=this;
             var chooseId=localStorage.getItem('chooseId');
             var chooseIds=localStorage.getItem('chooseIds')?JSON.parse(localStorage.getItem('chooseIds')): {};
+            var editPlain=JSON.parse(localStorage.getItem('editplain'));
             var obj={};
-            obj[chooseId]=imgUrl;
+          if(editPlain&&editPlain.planId){
+              self.chooseId=editPlain.planId;
+              self.chooseName=editPlain.planName;
+                editPlain.itemList.forEach(item=>{
+                  item.handImgList.forEach(itemdetail=>{
+                    if(itemdetail.handName==chooseId&&imgUrl){
+                        itemdetail.url=imgUrl;
+                       obj[chooseId]=imgUrl;
+                       chooseIds[itemdetail.handName]=obj;
+                       localStorage.setItem('editplain',JSON.stringify(editPlain));
+                    }else{
+                      obj[itemdetail.handName]=itemdetail.url;
+                      chooseIds[itemdetail.handName]=obj;
+                    }
+                    
+                  })
+                })
+            }
+           console.log('chooseIds',chooseIds);
+            if(imgUrl){
+               obj[chooseId]=imgUrl;
             chooseIds[chooseId]=obj;
+            }
+           
             console.log('chooseIds',chooseIds);
             var isHas=false;
 
@@ -349,21 +381,7 @@
           $('.ulflex li').click(function(){
 
           })
-//            function init() {
-//                var imgUrl=getUrlParame('imgUrl');
-//                var chooseId=localStorage.getItem('chooseId');
-//                var chooseIds=localStorage.getItem('chooseIds')?JSON.parse(localStorage.getItem('chooseIds')): {};
-//                var obj={};
-//                obj[chooseId]=imgUrl;
-//                chooseIds[chooseId]=obj;
-//                console.log(chooseIds);
-//                var isHas=false;
-//
-//                var element='';
-//
-//                localStorage.setItem('chooseIds',JSON.stringify(chooseIds));
-//            }
-//            init();
+
         })
     </script>
 </body>

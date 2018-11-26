@@ -100,7 +100,7 @@
 .price{
     font-size: .28rem;
     padding-left: 0.2rem;
-    color: #fe366a;
+    color: #000;
 }
 .butright{
     flex: 1;
@@ -118,4 +118,24 @@
 }
 #tab2,#tab3,#tab4{
     display: none;
+}
+.orderItem{
+    background: #fff;
+
+}
+.butright{
+       font-size: .26rem;
+    color: #ccc;
+}
+.bottomRight{
+    flex: none;
+    margin-left: .2rem;
+}
+.bottomLine{
+    padding-bottom: .2rem;
+    margin-top: .25rem;
+    justify-content: flex-end;
+}
+.price span{
+    color: #fe366a;
 }

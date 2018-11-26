@@ -42,7 +42,8 @@
               <div class="tabs change_list">
                 <div class="love active_content">
                   <div v-for="item in plainList" class="card">
-                    <p class="plainTitle">{{item.plainName}}<span class="editText"><img class="edit" src="./images/my/edit.png" alt="">编辑</span></p>
+                    <p class="plainTitle">{{item.planName}}<span class="editText" @click="editshow(item)"><img class="edit" src="./images/my/edit.png" alt="">编辑</span> 
+                      <span v-show="editshowdata" class="deleteImg" @click="deleteImg(item)">X</span></p>
                     <div v-for="plain in item.itemList ">                    
                          <p class="handName">{{plain.handName}}</p>
                              <ul class="ulflex"  >
@@ -53,10 +54,7 @@
                                         </div>                  
                                   </li>
                               </ul>  
-                    </div>
-                  <!--     <div class="printDiv">
-                          <button class="printButton">打印该方案</button>
-                      </div> -->
+                    </div>              
                   </div>               
                 </div>
               </div>
@@ -69,34 +67,27 @@
         el:"#app",
         data:function(){
           return ({
-                  plainList:[{
-                    id:1,
-                    plainName:'免费',               
-                    itemList:[{handName:'左手',handImgList:[
-                        {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"},
-                        {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}
-                    ]},
-                    {handName:'右手',handImgList:[
-                        {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"},
-                        {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}
-                    ]}]
-                  },
-                      {
-                          id:1,
-                          plainName:'免费',
-                          itemList:[{handName:'左手',handImgList:[
-                              {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"},
-                              {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}
-                          ]},
-                              {handName:'右手',handImgList:[
-                                  {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"},
-                                  {url:"./images/meijia1.png"}, {url:"./images/meijia1.png"}
-                              ]}]
-                      }
+                  editshowdata:true,
+                  plainList:[
                   ]
         })},
         methods:{
-            edit:function () {
+          editshow:function(item){
+            var userId=2;
+            localStorage.setItem('editplain',JSON.stringify(item));
+            localStorage.setItem('userId',userId);//储存
+            userId= localStorage.getItem('userId');//取出
+            console.log(item)
+           location.href="createPlainNew.html";
+
+          },
+          deleteImg:function(item){
+            console.log(item.planId);
+            this.plainList.splice(this.plainList.indexOf(item),1);
+            console.log('delete',this.plainList)
+
+          },
+            edit:function (e) {
 
             },
           infinite:function(done){
@@ -107,6 +98,51 @@
 
         },
         mounted:function(){
+          var self=this;
+            var plain={"planlist":[{"planId":1,"userId":4,"planName":"方案one","left1":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left2":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left3":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left4":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left5":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","right1":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","right2":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","right3":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","right4":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","right5":null},
+              {"planId":2,"userId":4,"planName":"方案two","left1":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left2":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left3":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left4":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","left5":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","right1":"http://47.101.136.23:8888/group1/M00/00/00/rBNWdFvILtuAIFBqAAHwyVMj8Bs238.png","right2":null,"right3":null,"right4":null,"right5":null}]}
+              var plainList=[];
+
+              for(var pl in plain.planlist){          
+                   var plan={
+                   }
+                   plan['planId']= plain.planlist[pl].planId;
+                   plan['userId']= plain.planlist[pl].userId;
+                    plan['planName']= plain.planlist[pl].planName;
+                    plan['itemList']=[];
+                    var handItem={};
+                    var hands=[];
+                    for(var i =1;i<=5;i++){
+                      var hand={};
+                      hand['url']=plain.planlist[pl]['left'+i]?plain.planlist[pl]['left'+i]:'';
+                      hand['handName']='left'+i;
+                      hands.push(hand);
+                    }
+                    // console.log('plainList',plainList)
+                   var item={};
+                    item['handName']="左手";
+                    item['handImgList']=hands;                 
+                    hands=[];
+                    for(var i =1;i<=5;i++){
+                      var hand={};
+                      hand['url']=plain.planlist[pl]['right'+i]?plain.planlist[pl]['right'+i]:'';
+                      hand['handName']='right'+i;
+                      hands.push(hand);
+                    }
+                     var rightItem={};
+                     rightItem['handName']="右手";
+                     rightItem['handImgList']=hands;
+                      plan['itemList'].push(item);
+                     plan['itemList'].push(rightItem);
+                     plainList.push(plan);
+                     // console.log('plainList',plainList);
+                      
+                      console.log(plainList)
+                
+              }
+              self.plainList=plainList;
+            
+              console.log("plainList",this.plainList)
 
         }
       })
