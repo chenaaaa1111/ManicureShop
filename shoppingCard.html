@@ -13,6 +13,10 @@
     <script type="text/javascript" src="css/font/iconfont.js" ></script>
 
     <script type="text/javascript" src="js/rem.js" ></script>
+    <link rel="stylesheet" type="text/css" href="./lib/dropload.css">
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     <script type="text/javascript" src="lib/vue-scroller.js"></script>
+
 </head>
 <body>
 <div class="head">
@@ -23,134 +27,200 @@
         </svg>
     </div>
 </div>
-<div class="wrapper">
-    <div class="shoppingBox">
-        <div class="list">
-            <div class="info">
-                <div class="name">2018新款全套美甲墨绿限时折扣</div>
-                <div class="format">规格:<span>一套</span></div>
-                <div class="operation">
-                    <div class="price">￥48.00</div>
-                    <div class="btnBox">
-                        <span>-</span>
-                        <span>1</span>
-                        <span>+</span>
-                    </div>
-                </div>
-            </div>
-            <div class="checkBox">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-checkboxround0"></use>
-                </svg>
-            </div>
-            <div class="picBox">
-                <img src="images/shopcars/product01.png" alt=""/>
-            </div>
+<div id="app">
+        <div class="wrapper">
+        <div class="shoppingBox">
+             <div class="carList" >
+                  <div class="card">
+                     <div class="input">
+                        <label class="ui-checkbox" >
+                                    <input class="carcheck" type="checkbox" >
+                        </label>                         
+                      </div>
+                      <div class="cardLeft">
+                          <img src="images/shopping/cs1.png" class="shopimg">
+                      </div>
+                      <div class="cardright">
+                          <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                          <div class="guige"><span>规格：</span><span>一套</span></div>
+                          <div class="priceline">
+                              <div class="price">
+                                  ￥<span class="oneprice">79.00</span> 
+                              </div>
+                              <div class="butright" style="clear: both;"> 
+                                    <ul class="btn-numbox">
+                                       <li>
+                                              <ul class="count">
+                                                  <li><span id="num-jian" class="num-jian">-</span></li>
+                                                  <li><input type="text" class="input-num" id="input-num"  value="1" /></li>
+                                                  <li><span id="num-jia" class="num-jia">+</span></li>
+                                              </ul>
+                                          </li>
+                                 </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
         </div>
-        <div class="list">
-            <div class="info">
-                <div class="name">2018新款全套美甲墨绿限时折扣</div>
-                <div class="format">规格:<span>一套</span></div>
-                <div class="operation">
-                    <div class="price">￥48.00</div>
-                    <div class="btnBox">
-                        <span>-</span>
-                        <span>1</span>
-                        <span>+</span>
+        <div class="other">
+            <div class="title">大家还买了</div>
+            <div class="cardBox">
+                <div class="sCard">
+                    <img src="images/shopcars/product01.png" />
+                    <div class="user">
+                        <div class="userName">安娜 Anna</div>
+                        <div class="userPic">
+                            <img src="images/shopcars/touxiang2.png" alt=""/>
+                        </div>
+                        <div class="price">￥68.00</div>
+                    </div>
+                </div>
+                <div class="sCard">
+                    <img src="images/shopcars/product01.png" />
+                    <div class="user">
+                        <div class="userName">安娜 Anna</div>
+                        <div class="userPic">
+                            <img src="images/shopcars/touxiang2.png" alt=""/>
+                        </div>
+                        <div class="price">￥68.00</div>
+                    </div>
+                </div>
+                <div class="sCard">
+                    <img src="images/shopcars/product01.png" />
+                    <div class="user">
+                        <div class="userName">安娜 Anna</div>
+                        <div class="userPic">
+                            <img src="images/shopcars/touxiang2.png" alt=""/>
+                        </div>
+                        <div class="price">￥68.00</div>
+                    </div>
+                </div>
+                <div class="sCard">
+                    <img src="images/shopcars/product01.png" />
+                    <div class="user">
+                        <div class="userName">安娜 Anna</div>
+                        <div class="userPic">
+                            <img src="images/shopcars/touxiang2.png" alt=""/>
+                        </div>
+                        <div class="price">￥68.00</div>
+                    </div>
+                </div>
+                <div class="sCard">
+                    <img src="images/shopcars/product01.png" />
+                    <div class="user">
+                        <div class="userName">安娜 Anna</div>
+                        <div class="userPic">
+                            <img src="images/shopcars/touxiang2.png" alt=""/>
+                        </div>
+                        <div class="price">￥68.00</div>
+                    </div>
+                </div>
+                <div class="sCard">
+                    <img src="images/shopcars/product01.png" />
+                    <div class="user">
+                        <div class="userName">安娜 Anna</div>
+                        <div class="userPic">
+                            <img src="images/shopcars/touxiang2.png" alt=""/>
+                        </div>
+                        <div class="price">￥68.00</div>
                     </div>
                 </div>
             </div>
-            <div class="checkBox">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-checkboxround0"></use>
-                </svg>
-            </div>
-            <div class="picBox">
-                <img src="images/shopcars/product01.png" alt=""/>
-            </div>
+
         </div>
     </div>
-    <div class="other">
-        <div class="title">大家还买了</div>
-        <div class="cardBox">
-            <div class="sCard">
-                <img src="images/shopcars/product01.png" />
-                <div class="user">
-                    <div class="userName">安娜 Anna</div>
-                    <div class="userPic">
-                        <img src="images/shopcars/touxiang2.png" alt=""/>
-                    </div>
-                    <div class="price">￥68.00</div>
+    <div class="footer">
+        <div class="inner">
+            <div class="money">
+                <div class="all">
+                    <label class="ui-checkbox">
+                        <input type="checkbox" checked="">
+                    </label>
+                    <p class="txt">全选</p>
                 </div>
+                <div class="settlement">总价:<span>￥59.00</span></div>
             </div>
-            <div class="sCard">
-                <img src="images/shopcars/product01.png" />
-                <div class="user">
-                    <div class="userName">安娜 Anna</div>
-                    <div class="userPic">
-                        <img src="images/shopcars/touxiang2.png" alt=""/>
-                    </div>
-                    <div class="price">￥68.00</div>
-                </div>
-            </div>
-            <div class="sCard">
-                <img src="images/shopcars/product01.png" />
-                <div class="user">
-                    <div class="userName">安娜 Anna</div>
-                    <div class="userPic">
-                        <img src="images/shopcars/touxiang2.png" alt=""/>
-                    </div>
-                    <div class="price">￥68.00</div>
-                </div>
-            </div>
-            <div class="sCard">
-                <img src="images/shopcars/product01.png" />
-                <div class="user">
-                    <div class="userName">安娜 Anna</div>
-                    <div class="userPic">
-                        <img src="images/shopcars/touxiang2.png" alt=""/>
-                    </div>
-                    <div class="price">￥68.00</div>
-                </div>
-            </div>
-            <div class="sCard">
-                <img src="images/shopcars/product01.png" />
-                <div class="user">
-                    <div class="userName">安娜 Anna</div>
-                    <div class="userPic">
-                        <img src="images/shopcars/touxiang2.png" alt=""/>
-                    </div>
-                    <div class="price">￥68.00</div>
-                </div>
-            </div>
-            <div class="sCard">
-                <img src="images/shopcars/product01.png" />
-                <div class="user">
-                    <div class="userName">安娜 Anna</div>
-                    <div class="userPic">
-                        <img src="images/shopcars/touxiang2.png" alt=""/>
-                    </div>
-                    <div class="price">￥68.00</div>
-                </div>
-            </div>
+            <div class="submit">去结算(1)</div>
         </div>
-
     </div>
 </div>
-<div class="footer">
-    <div class="inner">
-        <div class="money">
-            <div class="all">
-                <label class="ui-checkbox">
-                    <input type="checkbox" checked="">
-                </label>
-                <p class="txt">全选</p>
-            </div>
-            <div class="settlement">总价:<span>￥59.00</span></div>
-        </div>
-        <div class="submit">去结算(1)</div>
-    </div>
-</div>
+ <script type="text/javascript">
+      var vm=new Vue({
+             el:"#app",
+             data:function(){
+                return {
 
+                }
+             },
+             methods:{
+
+             }
+            })
+ </script>
+
+<!-- <script type="text/javascript" src="./lib/dropload.js">
+       $(function(){
+              var page = 0;
+    // 每页展示5个
+    var size = 5;
+
+    // dropload
+  var drop=$('.carList').dropload({
+        scrollArea : window,
+        loadfun:function(){
+         
+        },
+        loadDownFn : function(me){
+          console.log(me);
+          console.log(11);
+            page++;
+            // 拼接HTML
+            var result = '';
+            $.ajax({
+                type: 'GET',
+                url: 'http://ons.me/tools/dropload/json.php?page='+page+'&size='+size,
+                dataType: 'json',
+                success: function(data){
+                    var arrLen = data.length;
+                    if(arrLen > 0){
+                        for(var i=0; i<arrLen; i++){
+                           
+                                result+=''            
+                                    }
+                                // 如果没有数据
+                                }else{
+                                    // 锁定
+                                    me.lock();
+                                    // 无数据
+                                    me.noData();
+                                }
+                                // 为了测试，延迟1秒加载
+                                _drop=me;
+                                setTimeout(function(){
+                                    // 插入数据到页面，放到最后面
+                                    $(result).appendTo('.orderList');
+                                    // 每次数据插入，必须重置
+                                    me.resetload();
+                                    var chooseAll= $(".orderList").attr('data-chooseAll');
+                                    if(chooseAll!='false'&&chooseAll){
+                                      $('.carcheck').prop('checked','checked');
+                                      getTotalFees();
+                                    }
+
+                                },1000);
+                            },
+                            error: function(xhr, type){
+                                alert('Ajax error!');
+                                // 即使加载出错，也得重置
+                                me.resetload();
+                            }
+                        });
+                    }
+                });
+       })
+
+</script>
+<script type="text/javascript" src="js/indexjs.js"></script> -->
 </body>
 </html>

@@ -212,7 +212,7 @@
           </p>
           <div class="buttons">
              <button class="makesure redlinebg " id="buy">立即购买</button>
-              <button class="cance blueLine disabled" id="score" >积分兑换</button>
+              <button class="cance blueLine" id="score" >积分兑换</button>
               
           </div>
            <span id="scoreLost">积分剩余<span id="scoreLostnum">505</span></span>
@@ -229,7 +229,7 @@
           </p>
           <div class="buttons">
              <button class="makesure" id="buyse">确认兑换</button>
-              <button class="cance" id="scorese">剩余<span id="score">405</span>积分</button>
+              <button class="cance" id="scorese">剩余<span id="scorespan">405</span>积分</button>
           </div>
         </div>
          <div class="modolContent modobuy hide " >
@@ -248,6 +248,11 @@
         </div>
     </div>
     <script type="text/javascript">
+      var score=50;
+
+       // if(score>40){
+       //    $("#score").addClass('disabled');
+       // }
     	  function toggleDiv (selector){
           		$(selector).toggleClass('hide');
           }
