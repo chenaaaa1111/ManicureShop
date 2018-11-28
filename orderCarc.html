@@ -39,7 +39,7 @@
           </div>
 	</div>
     <div class="carList">
-           <div class="orderList">                 
+           <div class="orderList" id="orderList">                 
                   <div class="orderItem" id="s1">
                       <div class="card">
                          <div class="input">
@@ -328,6 +328,7 @@ $(function(){//分页
     // dropload
   var drop=$('.carList').dropload({
         scrollArea : window,
+        threshold:200,//到底部的距离，因为距离底部还有别的元素，所以加这个
         loadfun:function(){
          
         },

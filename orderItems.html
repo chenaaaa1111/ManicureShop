@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+    <link rel="stylesheet" href="js/search/full.css" />
+    <link rel="stylesheet" href="css/orderItems.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="css/font/iconfont.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+</head>
+<body>
+<div id="container">
+    <div class="top">
+        <div class="head">
+            <div class="title">我的订单</div>
+            <div class="left">
+                <svg class="icon" onclick="goback()" aria-hidden="true">
+                    <use xlink:href="#icon-back-m"></use>
+                </svg>
+            </div>
+            <ul class="headerList">
+                <li>订单已完成</li>
+               <!--  <li> <img src="./images/my/orderItem.png"> </li> -->
+            </ul>
+        </div>
+    </div>
+</div>
+<div>
+    <div id="tab1">
+        <div class="orderList">
+            <div class="orderItem" id="s1">
+                <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> x10</div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="card">
+                    <div class="cardLeft">
+                        <img src="images/shopping/cs1.png" class="shopimg">
+                    </div>
+                    <div class="cardright">
+                        <div class="cardTitle">娜扎同款！抖音王洪韩国dashing diva 指甲贴</div>
+                        <div class="priceline">
+                            <div class="price">
+                                ￥79.00
+                            </div>
+                            <div class="butright"> x10</div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="priceline bottomLine">
+                            <div class="price">
+                                <span  class="black">共<span>1</span>件商品</span>
+                                合计: <span>￥79.00</span>
+                            </div>
+                           
+                        </div>
+            </div>       
+        </div>
+    </div>
+    <div class="innerMesc">
+        <p>订单编号:<span>53100092639</span></p>
+        <p>创建时间:<span>2015-12-11 10:30:21</span></p>
+        <p>付款时间:<span>2015-12-11 10:30:21</span></p>
+    </div>
+    <div class="others">
+        <div class="titleBar">
+          <div class="titleName">大家还买了</div>
+        </div>
+        <div class="pokerBox">
+            <ul class="ui-row">
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_01.png"/>
+                        </div>
+                        <div class="depict">
+                            黄黑搭配，秀出你自己的爪子
+                        </div>
+                        <div class="money">
+                            ￥ 6.5
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_02.png"/>
+                        </div>
+                        <div class="depict">
+                            2018新款全套美甲墨绿彩釉中国风蹄子
+                        </div>
+                        <div class="money">
+                            ￥ 6.5
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_03.png"/>
+                        </div>
+                        <div class="depict">
+                            2018新款全套美甲墨绿彩釉中国风蹄子
+                        </div>
+                        <div class="money">
+                            ￥ 6.5
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-col ui-col-50">
+                    <div class="poker">
+                        <div class="pokerImg">
+                            <img src="images/index/Pic_04.png"/>
+                        </div>
+                        <div class="depict">
+                            2018新款全套美甲墨绿彩釉中国风蹄子
+                        </div>
+                        <div class="money">
+                            ￥ 6.5
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function goback(){
+        
+    }
+    function delc() {//删除订单
+        $.ajax({
+            type: "GET",
+            url: "test.json",
+            data: {},
+            dataType: "json",
+            success: function(data){
+
+            }
+        });
+    }
+    function pay() {//去支付
+        $.ajax({
+            type: "GET",
+            url: "test.json",
+            data: {},
+            dataType: "json",
+            success: function(data){
+
+            }
+        });
+    }
+    $(function () {
+        $(".headerList li").click(function (e) {
+            $(e.target).addClass('active').siblings().removeClass('active');
+            console.log($(e.target).data("href"));
+            var id=$(e.target).data("href");
+            $("#"+id).css("display","block").siblings().css("display","none");
+        })
+    })
+</script>
+</body>
+</html>

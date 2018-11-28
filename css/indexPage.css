@@ -70,15 +70,24 @@ html,body{width: 100%;height: 100%;}
 }
 .block1{
   background-color: #E64458;
+  background: url('./../images/sfree1.png') no-repeat center center ;
+  background-size: 100% auto;
 }
 .block2{
   background-color: #FFAA48;
+  background: url('./../images/sfree2.png') no-repeat center center ;
+  background-size: 100% auto;
 }
 .block3{
   background-color: #FFBB88;
+   background-color: #FFAA48;
+  background: url('./../images/sfree3.png') no-repeat center center ;
+  background-size: 100% auto;
 }
 .block4{
   background-color: #F099F9;
+  background: url('./../images/sfree4.png') no-repeat center center ;
+  background-size: 100% auto;
 }
 
 .nominate{

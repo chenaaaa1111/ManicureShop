@@ -1,0 +1,289 @@
+.top{
+  padding-top: 0.49rem;background-color: #FF4F89;
+}
+body{
+    background: #fff;
+}
+.head{
+   position: relative;
+}
+.title{
+    margin: 0rem 0.98rem;height: 100%;line-height: 0.98rem;font-size: 0.32rem;color: #FFF;text-align: center;
+}
+.head .left{
+    width: 0.98rem;height: 59%;position: absolute;top: 0;left: 0;
+    font-size: 0.32rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.26rem;
+}
+.head .right{
+    width: 0.98rem;height: 100%;position: absolute;top: 0;right: 0;
+    font-size: 0.24rem;color: #fff;line-height: 0.98rem;
+    text-indent: 0.24rem;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.headerList{
+    display: flex;
+    background: #ff4a8c url('./../images/my/orderItem.png') no-repeat;
+    background-position: 80% .2rem;
+    background-size: .97rem .97rem;
+    font-size: 0.28rem;
+    color: #fff;
+    padding-bottom: .7rem;
+    padding-top: .3rem;
+    font-size: .3rem;
+    padding-left: .3rem;
+
+
+ }
+.headerList li{
+  width: 25%;
+ height: 0.64rem;
+    line-height: 0.64rem;
+    text-align: center;
+
+}
+
+/*头部样式*/
+.itemtitle{
+    font-size: 0.24rem;
+    height: .58rem;
+    line-height: .51rem;
+    padding-left: .24rem;
+    margin-top: .2rem;
+    background: #f9f9f9;
+}
+.active{
+    font-size: 0.35rem;
+    font-weight: 900;
+}
+.card{
+    padding-left: .24rem;
+    display: flex;
+    padding-bottom: .24rem;
+    border-bottom: 1px solid #ccc;
+    background: #ffffff;
+    padding-top: .3rem;
+    height: 1.4rem;
+}
+.shopimg{
+    width: 1.5rem;
+    height: 1.45rem;
+}
+.cardTitle{
+    font-size: .28rem;
+    color: #333;
+    padding-left: .2rem;
+    line-height: .34rem;
+    height:.68rem;
+}
+.priceline{
+    display: flex;
+}
+.success{
+    font-size: .24rem;
+    width: 1.2rem;
+    height: .4rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 0.05rem;
+    line-height: .4rem;
+    color: #999;
+}
+.delete{
+    font-size: .24rem;
+    margin-left: .20rem;
+    width: 1.2rem;
+    height: .4rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 0.10rem;
+    line-height: .4rem;
+    color: #999;
+}
+.price{
+    font-size: .28rem;
+    padding-left: 0.2rem;
+    color: #000;
+    padding-right: .2rem;
+}
+.butright{
+    flex: 1;
+    flex-direction: row-reverse;
+    text-align: right;
+    padding-right: .24rem;
+    display: flex;
+}
+.priceline{
+    margin-top: 0.4rem;
+}
+.topay{
+    background: #ff4a94;
+    color: #fff;
+}
+#tab2,#tab3,#tab4{
+    display: none;
+}
+.orderItem{
+    background: #fff;
+
+}
+.butright{
+       font-size: .26rem;
+    color: #ccc;
+}
+.bottomRight{
+    flex: none;
+    margin-left: .2rem;
+}
+.price{
+
+}
+.bottomLine{
+    padding-bottom: .2rem;
+    margin-top: .25rem;
+    justify-content: flex-end;
+}
+.price span{
+    color: #fe366a;
+}
+.price span.black{
+    color: #000;
+}
+.price span.black span{
+    color: #000;
+}
+
+.others{
+    background: #fff;
+    padding:.2rem;
+    border-top: 1px solid #eee;
+    margin-top: .2rem;
+
+}
+
+
+
+.nominate{
+  margin-top: 0.2rem;background: #FFF;
+  padding-top: 0.24rem;
+}
+.titleBar{}
+.titleBar:after{
+  display: block;height: 0;content: "";clear: both;
+}
+.titleName{
+  font-size: 0.36rem;color: #333;font-weight: 600;
+  float: left;margin-left: 0.38rem;height: 0.36rem;line-height: 0.36rem;
+}
+.moreBtn{
+  float: right;font-size: 0.24rem;margin-right: 0.4rem;color: #999;line-height: 0.36rem;
+}
+.pokerBox{
+  margin: 0.26rem 0.4rem 0rem;
+}
+.poker{
+  /* height: 3.7rem; */
+  border: 1px solid #ddd;border-radius: 5px;overflow: hidden;
+}
+.pokerBox .ui-row{border-bottom: 2px solid #eee;}
+.pokerBox .ui-row li{margin-bottom: 0.28rem;}
+.pokerBox .ui-row li:nth-child(odd) .poker{
+  margin-right: 0.3rem;
+}
+.pokerBox .ui-row li:nth-child(even) .poker{
+  margin-left: 0.3rem;
+}
+.pokerImg{
+  position: relative;width: 100%;
+  padding-bottom: 100%;border-radius: 5px;overflow: hidden;
+}
+.pokerImg img{
+  display: block;width: 100%;height: 100%;
+  position: absolute;top: 0;left: 0;
+}
+.poker .depict{
+  height: 0.42rem;margin: 0rem 0.1rem 0.1rem;
+  font-size: 0.24rem;line-height: 0.42rem;color: #333;
+  white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+}
+.poker .money{
+  font-size: 0.24rem;margin: 0rem 0.1rem 0.0rem;color: #F21542;font-weight: 600;
+  text-align: center;
+}
+.belt{
+  margin: 0.16rem 0rem 0.2rem;height: 2.1rem;background: #FFF;padding-bottom: 0.53rem;
+}
+.beltInner{width: 100%;height: 2.1rem;}
+.beltInner img{
+  display: block;width: 100%;height: 100%;
+}
+.rebate{
+  background: #FFF;margin: 0rem 0.24rem;border-bottom: 2px solid #EEE;
+  overflow: auto;padding: 0.32rem 0rem 0rem;white-space: nowrap;
+}
+.rebate::after{display: block;height: 0;content: '';clear: both;}
+.rebateList{
+  width: 2.26rem;border: 1px solid #ECECEC;display: inline-block;
+  border-radius: 8px;overflow: hidden;position: relative;margin-right: 0.35rem;
+}
+.rebateImgBox{width: 100%;height: 2.95rem;padding-top: 0;}
+.rebateImgBox img{
+  display: block;width: 100%;height: 100%;
+}
+.rebateImgBox .ui-subscript{
+  font-size: 0.18rem;height: 0.5rem;line-height: 0.6rem;
+  -webkit-transform: rotate(-45deg) translate(-25%, -80%);
+  transform: rotate(-45deg) translate(-25%, -80%);
+}
+.rebateInfo{
+  height: 0.69rem;background: #FFF;position: relative;
+}
+.rebateIcon{
+  width: 0.68rem;height: 100%;
+  position: absolute;top: 0;left: 0;
+}
+.rebateName{
+  height: 100%;margin: 0rem 0.12rem 0rem 0.68rem;line-height: 0.68rem;
+  white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+  font-size: 0.24rem;color: rgba(0,0,0,0.5);
+}
+
+.userIcon{width: 0.44rem;height: 0.44rem;margin: 0.12rem;border-radius: 50%;overflow: hidden;}
+.userIcon img{
+  display: block;width: 100%;height: 100%;
+}
+.priceBox{
+  background: rgba(0,0,0,0.5);height: 0.58rem;line-height: 0.58rem;
+  position: absolute;left: 0;bottom: 0.69rem;width: 100%;
+}
+.titlep{
+    font-size: .26rem;
+    color: #000;
+    margin-top: .2rem;
+    padding-top: .2rem;
+}
+.innerMesc{
+    font-size: .24rem;
+    color: #333;
+    line-height: .4rem;
+    padding-left: .2rem;
+    padding-bottom: .5rem;
+    padding-top: .2rem;
+    border-top: 1px solid #eee; 
+    background: #fff;
+    border-bottom: 1px solid #eee;
+
+}
+#tab1{
+    border-bottom: 1px solid #eee;
+    margin-bottom: .2rem;
+}
+.cardright{
+    padding-right: .5rem;
+}
